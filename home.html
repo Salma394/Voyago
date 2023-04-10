@@ -26,16 +26,17 @@
                     
                     
             
-        </nav>
-    </div>
+        </nav> 
+        
+        <div class="title">
+            <h1>Voyago</h1>
+        </div>
+ 
 <div class = "firstpic">
-    <img style="float: right; margin: 90px 90px 40px 40px;" src="Images/Ocean.jpeg" width="300"/>
+    <img style="float: right; margin: 45px 45px 40px 30px;" src="Images/Ocean.jpeg" width="300"/>
     </div>
     <div>
-        <div class="title">
-            <img src="Images/Heart.png" width = 40px height = 40px, class="logo" alt="Logo" title="Voyago">
-            <h1 img src="Images/Heart.png">Voyago</h1>
-        </div>
+       
         <div class = "tagline">
             <p>The ultimate destination for travel recommendations</p>
         </div>
@@ -51,48 +52,43 @@
 <!-- Images with element of interactivity -->
 
 <section class="container">
-    <div class="destinations">
         <h2>Holiday Destinations</h2>
-    </div>
+  
     <div class= "paragraph1">
         <p>Adventure, relaxation, and excitement await with our range of holiday destinations – from adrenaline-pumping adventures to sandy shores, engaging activities, and vibrant cities.</p>
     </div>
-    <div class="rowitems">
-        <div class="container-box">
-        <div class="container-image">
-           <img src="Images/beach.jpeg" alt="Beach">
-        </div>
-          
-            <p>Beach</p>
-        </div>
-    
-        <div class="container-box">
-        <div class="container-image">
-           <img src="Images/City break.jpeg" alt="City Break">
-        </div>
-           
+  
+        <div class="row">
+
+            <div class = "column" style="display: flex; max-width: 1200px; width: 100%; flex-wrap: wrap; justify-content: center; ">
+           <img src="Images/beachpic.jpg" alt="Beach" class = "destination">
+           <div class="overlay">
+            <div class = "text"> Beach</div>
+            <!-- <p>Beach</p> -->
+            
+</div>
+</div>
+        <div class = "column">
+           <img src="Images/budapest.jpg" alt="City Break" class = "destination">
             <p>City Break</p>
-        </div>
+            </div>
 
-        <div class="container-box">
-        <div class="container-image">
-            <img src="Images/Adventure Holiday.jpeg" alt="Adventure">
-        </div>
+        <div class = "column">
+            <img src="Images/adventure.jpg" alt="Adventure" class = "destination">
             <p>Adventure</p>
-        </div>
+             </div>
 
-        <div class="container-box">
-        <div class="container-image">
-            <img src="Images/Activity Holiday.jpeg" alt="Activity">
-        </div>
-           
+            <div class = "column">
+            <img src="Images/activity.jpg" alt="Activity" class = "destination">
+    
             <p>Activity</p>
-        </div>
+            </div>
+       </div>
+   </section>
 
-    </div>
-
-    </div>
 <br>
+
+
 <div>
     <h2>Want to travel but don't know where? Let's find out!</h2>
     <button type="button">Get Started!</button>
@@ -109,40 +105,53 @@
 </div>
 
 
-<div class="container-box">
-    <div class="container-image">
-        <img src="Images/Venice.webp" alt="Venice,Italy">
-    
+<div class="row2">
+
+
+    <div class = "column2">
+        <img src="Images/Venice.webp" alt="Venice,Italy" class = "locations">
         <p>Venice, Italy</p>
-            <img src="Images/Keukenhof-Holland.jpg" alt="Amsterdam,Netherlands">
+            </div>
+
+            <div class = "column2">
+            <img src="Images/Keukenhof-Holland.jpg" alt="Amsterdam,Netherlands" class = "locations">
         
             <p>Amsterdam, Netherlands</p>
-       
-                <img src="Images/Japan Cherry Blossom.webp" alt="Yoshino.Japan">
-          
+                </div>
+                
+                <div class = "column2">
+                <img src="Images/mountain_cherry.jpg" alt="Yoshino.Japan" class = "locations">
+                
                 <p>Yoshino, Japan</p>
-        
-        
-                    <img src="Images/Turks and Caicos .jpeg" alt="Turks and Caicos">
+                  </div>
+                  
+                  <div class = "column2">
+                    <img src="Images/Turks and Caicos .jpeg" alt="Turks and Caicos" class = "locations">
                
                     <p>Turks and Caicos</p>
-               
-                        <img src="Images/Copenhagen.jpeg" alt="Copenhagen,Denmark">
+                  </div>
+                  <div class = "column2">
+                        <img src="Images/denmark.jpg" alt="Copenhagen,Denmark" class = "locations">
                 
                         <p>Copenhagen, Denmark</p>
                     
-                       
-                            <img src="Images/Algarve.jpeg" alt="Algarve,Portugal">
+                       </div>
+                       <div class = "column2">
+                            <img src="Images/Algarve.jpeg" alt="Algarve,Portugal" class = "locations">
                       
                             <p>Algarve, Portugal</p>
-                        </div>
-                        </div>
-
-                        
+                    </div>
+                    <div class = "column2">
+                        <img src="Images/marrakech.jpg" alt="Marrakech,Morroco" class = "locations">
+                  
+                        <p>Marrakech, Morroco</p>
+                </div>
+                                </div>
+                
 
 <!-- Why us? -->
 <br>
-
+<div section = "why">
 <h2>Why consider our recommendations?</h2>
 <div>
 <h3>Performance</h3>
@@ -161,8 +170,11 @@
 
             </div>
 
+</div>
+ <br>           
 <!-- Subscribe -->
-<div>
+
+<div section = "marketing">
 <h2>Your travel journey starts here</h2>
 <p>Sign up for more travel tips and holiday inspirations straight to your inbox</p>
 <input type="text" placeholder="Email Address">
@@ -172,11 +184,11 @@
 </div>
 <br>
 
-<div>
 
-</div>
 
+<br>
 <!-- Footer -->
+
 
 <footer>
     <div class="navbar">
@@ -191,3 +203,8 @@
         <H6>&copy; 2023 Voyago Ltd @ Sky Get into Tech, All rights reserved.</H6>
       </div>
 </footer>
+
+</div>
+
+</body>
+</html>

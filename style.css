@@ -1,6 +1,8 @@
 * {
-    font-family: Source Sans 3;
-    color:#7a7a7a;
+    /* font-family: Source Sans 3; */
+    font-family: "Source Sans Pro";
+    color:black;
+    background-color:#F7EDE2 ;
 }
 
 h1{
@@ -64,22 +66,57 @@ h1{
     line-height: 1.28;
     letter-spacing: -0.5px;
     text-align: left;
-}
+  }
 
 .firstpic{
-    border-radius: 10px;
+      border-radius: 50%;
+  }
 
-}
 
 .container-image{
     background: white;
   margin: 0 auto;
   padding: 5%;
-  width: 75%;
+  width: auto;
+}
+
+.destination {
+  background: white;
+  width: auto;
+  height: 200px;
+  border-radius: 20px;
+} 
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+
+.locations{
+  background: white;
+
+  width: auto;
+  height: 300px;
+  border-radius: 20px
+}
+
+.row2 {
+  display: flex;
+}
+
+.column2 {
+  flex: 33.33%;
+  padding: 5px;
 }
 
 .navbar{
-    float: center;
+  position:relative;
+    float: none;
     color:7a7a7a;
     text-align: center;
     padding: 20px 24px;
@@ -88,10 +125,12 @@ h1{
   }
 
   .fineprint{
-    float: center;
+    position: relative;
+    float: none;
     color:7a7a7a;
     text-align: center;
     padding: 20px 24px;
     text-decoration: none;
     font-size: 15px;
   }
+
