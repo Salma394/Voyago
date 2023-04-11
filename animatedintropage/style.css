@@ -1,0 +1,214 @@
+ @import url('https://fonts.googleapis.com/css2?family=Jost&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+ *{
+     margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+ }
+/* asterick in line 3 selects everything in this class  */
+
+/* border box so nothing is affected in this class */
+
+ .showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    transition: 0.5s;
+    z-index: 2;
+    transition: 0.5s;
+
+ }
+/* showcase wraps around everything except for the menu */
+/* vh =viewport height */
+/* flex display places everything in the middle of the webpage */
+/* justify content - anything between headings or paragraphs have a space attributed to them */
+/*  align items brings everything that's in the middle of the webpage downwards directly in the centre of the page */
+/* z index makes the menu options more visible on the black background, if it's set to -2 it fades into black background */
+ /*  transition from showcase to menu */
+.showcase header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+/* display flex will put the title Travel and toggle next to each other horizontally*/
+
+.logo {
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url('toggle');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer; 
+} 
+
+/* once toggle works, need to move showcase to the right for menu to show by writing 
+.showcase.active {
+    right: 300px;
+}
+ */
+
+
+.toggle.active {
+    background: url('toggle');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+/*  for background video to cover the whole page */
+/* transulent text that fades into background but is still readable */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #03a9f4;
+    mix-blend-mode: overlay;
+}
+/* if background is rgba(0,0,0,0 in line 88 and ALPHA (the last number in brackets) is 0.5 (instead of 0 like red, green and blue) the background video goes darker */
+
+/* for now the background video looks more blue than the original video */
+.text {
+    position: relative;
+    z-index: 10;
+}
+/* makes text more visible */
+
+.text h2{
+    font-size: 3em;
+    font-weight: 800;
+    color: #fff; 
+    line-height: 1em;
+    text-transform: uppercase;
+}
+/* em in line 101 means multiple "parent" text by 5 */
+.text h3{
+    font-size: 2em;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.text p{
+    font-size: 1.1em;
+    color: #fff;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+}
+/* for the paragraph not to run across the other side of the page. makes paragraph stay on the side*/
+
+.text a{
+    display: inline-block;
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    color: #111;
+    margin-top: 10px;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 2px; */
+}
+/* text decoration to move the underline */
+/* margin-top to move the text down */
+
+.text a:hover {
+    letter-spacing: 6px;
+}
+.social{
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.social li {
+    list-style: none;
+}
+/* to remove bullet points */
+.social li a{
+    display:inline-block;
+    filter: invert(1);
+    margin-right: 20px;
+    transform: scale(0.5);
+    transition: 0.5s;
+}
+.social li a:hover {
+    transform: scale(0.5) translate(-15px);
+}
+
+
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .menu.ul {
+    position: relative;
+    list-style: none;
+}
+/* for menu options to be in the centre without bullet points */
+
+ .menu ul li a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #111;
+ }
+
+ /*  to remove the underlines and change the  */
+ .menu ul li a:hover {
+    color: #03a9f4;
+ }
+
+ /* so it shows blue when hovered over */
+ /* to set all overlays to the blue color, you can add a custom property/ root scope variable by writing the following on line 2
+ :root {
+    --overlay-color: #03a9f4;
+ }
+ then change the background colour in the overlay class on line 96 to background: var(--overlay-colour);
+ */
+

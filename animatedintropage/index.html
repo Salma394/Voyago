@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Travel Landing Page</title>
+</head>
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">Travel</h2>
+            <div class="toggle"></div>
+        </header>
+
+        <video src="paradise_hd.mp4" muted loop autoplay></video>  
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>Welcome to Voyago</h2>
+            <h3>Where the journey is never ending</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora explicabo quae dolore et alias illum
+            itaque maxime, dolorem labore libero?</p>
+            <a href="#">Explore</a>
+        </div>
+
+        <ul class="social">
+            <li><a href="#"><img src="facebook.png"></a></li>
+            <li>
+                <li><a href="#"><img src="twitter.png"></a></li>
+            <li>
+                <li><a href="#"><img src="instagram.png"></a></li>
+            <li>
+        </ul>
+
+    </section> 
+
+    <div class="menu">
+        <ul>
+            <li><a href="#"> Home</a></li>
+            <li><a href="#"> News</a></li>
+            <li><a href="#"> Destination</a></li>
+            <li><a href="#"> Contact</a></li>
+
+        </ul>
+    </div>   
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcaseToggle = document.querySelector('.showcase')
+
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active')
+            showcaseToggle.classList.toggle('active')
+        })
+    </script>
+<!-- to make toggle button open and close menu to return back to showcase, we have to create a javascript tag that makes the toggle and showcase active. -->
+ <!-- line 50 allows us to select things in the toggle bar-->
+<!-- 51 creates the second showcase class variable --> 
+    
+</body>
+</html>
