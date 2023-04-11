@@ -1,0 +1,21 @@
+# Compiled Python files
+__pycache__/
+*.pyc
+
+# Local development files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Flask logs
+*.log
+
+# PyMySQL database files
+*.db
+
+# Environment variables
+.env
+
+# Virtual environment
+venv/
