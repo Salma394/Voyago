@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}Voyago</title>
+    <link rel="icon" href="Images/Heart.png">
+   <link rel="stylesheet" href="{{url_for('static',filename = 'styles.css')}}"/>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+   
+</head>
+
+
+<header>
+
+    <!-- Header -->
+        
+        
+            <div class="topnav" id="home"> 
+                <nav>
+                    <a href="{{url_for('login')}}">Sign In</a>
+                    <a href="{{ url_for('contact')}}">Contact Us</a>
+                    <a href="{{ url_for('destinations') }}">Destinations</a>
+                    <a href="{{ url_for('home') }}">Home</a>
+
+                    
+                    
+            
+        </nav> 
+        
+        <div class="title">
+            <h1>Voyago</h1>
+        </div>
+            </div>
+</header>
+<body>
+
+<div class = "firstpic">
+<!--    <img id="pic1" style="float: right; margin: 45px 45px 40px 30px; width: 400px; " src="{{url_for('static', filename='Ocean.jpeg')}}"/>-->
+<!--    </div>-->
+    <div>
+        <img id= "pic2" class = "firstpic" src="{{url_for('static', filename='Ocean.jpeg')}}"/>
+
+        <div class = "tagline">
+            <p>The ultimate destination for travel recommendations</p>
+        </div>
+            <div class= "paragraph1">
+		    <p>Unlock the hidden gems of the world with our expertly curated travel recommendations, and experience unforgettable adventures that exceed your wildest dreams.</p>
+            </div>
+            <input type="text" placeholder="Search...">
+        </div>
+    </div>
+   
+
+<!-- Destination categories -->
+<!-- Images with element of interactivity -->
+
+<section class="container">
+        <h2>Holiday Destinations</h2>
+  
+    <div class= "paragraph1">
+        <p>Adventure, relaxation, and excitement await with our range of holiday destinations – from adrenaline-pumping adventures to sandy shores, engaging activities, and vibrant cities.</p>
+    </div>
+  
+        <div class="row">
+
+           <div class = "column">
+           <img style = "width: auto; height: 200px; border-radius: 20px;"src="{{url_for('static', filename='beachpic.jpg')}}"/>
+            <p class = "country_subheading2">Beach</p>
+
+</div>
+
+        <div class = "column">
+           <img style = "width: auto; height: 200px; border-radius: 20px;"src="{{url_for('static', filename='budapest.jpg')}}"/>
+            <p class = "country_subheading2">City Break</p>
+            </div>
+
+        <div class = "column">
+            <img style = "width: auto; height: 200px; border-radius: 20px;" src="{{url_for('static', filename='adventure.jpg')}}"/>
+            <p class = "country_subheading2">Adventure</p>
+             </div>
+
+            <div class = "column">
+            <img style = "width: auto; height: 200px; border-radius: 20px;" src="{{url_for('static', filename='activity.jpg')}}"/>
+    
+            <p class = "country_subheading2">Activity</p>
+            </div>
+       </div>
+   </section>
+
+<br>
+
+
+<div>
+    <h2>Want to travel but don't know where? Let's find out!</h2>
+    <button type="button">Get Started!</button>
+
+</div>
+
+
+<!-- Top Destinations -->
+<!-- This will be a carasoul -->
+
+<h2>Top Destinations in Spring</h2>
+<div class = "paragraph1">
+    <p>Experience the best of spring at top destinations, from cherry blossoms in Japan to Caribbean beaches.</p>
+</div>
+
+
+<div class="row2">
+
+
+    <div class = "column2">
+        <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='Venice.webp')}}"/>
+        <p class = "country_subheading">Venice, Italy</p>
+            </div>
+
+            <div class = "column2">
+            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='Keukenhof-Holland.jpg')}}"/>
+            <p class = "country_subheading">Amsterdam, Netherlands</p>
+                </div>
+                
+                <div class = "column2">
+                <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='mountain_cherry.jpg')}}"/>
+                
+                <p class = "country_subheading">Yoshino, Japan</p>
+                  </div>
+                  
+                  <div class = "column2">
+                   <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='Turks and Caicos .jpeg')}}"/>
+               
+                    <p class = "country_subheading">Turks and Caicos</p>
+                  </div>
+
+                  <div class = "column2">
+                       <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='denmark.jpg')}}"/>
+                        <p class = "country_subheading">Copenhagen, Denmark</p>
+                    
+                       </div>
+
+                       <div class = "column2">
+                           <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='Algarve.jpeg')}}"/>
+                            <p class = "country_subheading">Algarve, Portugal</p>
+                    </div>
+                    <div class = "column2">
+                      <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='marrakech.jpg')}}"/>
+                        <p class = "country_subheading">Marrakech, Morroco</p>
+
+                </div>
+                                </div>
+                
+
+<!-- Why us? -->
+<br>
+<div section = "why">
+<h2>Why consider our recommendations?</h2>
+<div>
+<h3>Performance</h3>
+<p>One of our core values is providing high quality recommendations from thorough research so you don't have to! </p>
+</div>
+
+<div>
+    <h3>Assurance</h3>
+    <p>We aim to give positive assurance to travelers so they can make educated decisions prior to booking their holidays .</p>
+    </div>
+
+<div>
+    <h3>No payments required</h3>
+    <p>No free 30 day trials or requests for bank details. Voyago is completely free of charge!</p>
+        </div>
+
+            </div>
+
+</div>
+ <br>           
+<!-- Subscribe -->
+
+<h2>Your travel journey starts here</h2>
+<p>Sign up for more travel tips and holiday inspirations straight to your inbox</p>
+
+<a class = "subscribe" href="marketing"><button>Click to Subscribe!</button></a>
+</div>
+
+
+<!-- Footer -->
+
+
+<footer>
+
+    <div class="navbar">
+        <a href="#about" class="active">About</a>
+        <a href="terms.html">Terms and Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="sitemap">Sitemap</a>
+        <a href="#FAQ">FAQ</a>
+      </div>
+      <div class = "fineprint">
+        <h6>Sky Campus,Grant Way, Isleworth, TW5 5QD</h6>
+        <H6>&copy; 2023 Voyago Ltd @ Sky Get into Tech, All rights reserved.</H6>
+      </div>
+</footer>
+
+
+
+</body>
+</html>

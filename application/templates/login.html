@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block main_content %}
+<div class = "loginform">
+        <form method="POST">
+
+             {{ form.email.label }} {{ form.email }}
+            <br>
+             {{ form.password.label }} {{ form.password }}
+            <br>
+            {{ form.login }}
+
+    </form>
+     </div>
+<a class = "register" href="register"><button>Click to register!</button></a>
+</div>
+{% endblock %}

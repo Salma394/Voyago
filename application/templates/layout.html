@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{Title}}</title>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/Heart.png">
+   <link rel="stylesheet" href="{{url_for('static',filename = 'styles.css')}}"/>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css')}}"/>
+</head>
+<body>
+<header>
+
+    <div class= "topnav" id="home">
+                <nav>
+                    <a href="{{url_for('login')}}">Sign In</a>
+                    <a href="{{ url_for('contact')}}">Contact Us</a>
+                    <a href="{{ url_for('destinations') }}">Destinations</a>
+                    <a href="{{ url_for('home') }}">Home</a>
+
+
+
+
+   </nav>
+</div>
+        <div class="title">
+            <h1>Voyago</h1>
+        </div>
+            </div>
+</header>
+
+{% block main_content %}{% endblock %}
+
+
+<hr>
+<footer>
+
+      <div class="navbar">
+        <a href="#about" class="active">About</a>
+        <a href="terms.html">Terms and Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="sitemap">Sitemap</a>
+        <a href="#FAQ">FAQ</a>
+      </div>
+      <div class = "fineprint">
+        <h6>Sky Campus,Grant Way, Isleworth, TW5 5QD</h6>
+        <H6>&copy; 2023 Voyago Ltd @ Sky Get into Tech, All rights reserved.</H6>
+      </div>
+
+</footer>
+
+</body>
+
+</html>
