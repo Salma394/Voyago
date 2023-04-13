@@ -2,3 +2,7 @@ Flask
 pymysql
 wtforms
 flask_wtf
+<<<<<<< HEAD
+=======
+passlib
+>>>>>>> refs/remotes/origin/Salma

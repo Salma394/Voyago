@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voyago</title>
+    <title>{% block title %}{% endblock %}Voyago</title>
     <link rel="icon" href="Images/Heart.png">
-    <link rel = "stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" href="{{url_for('static',filename = 'styles.css')}}"/>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
    
 </head>
 
-<body>
 
-    
+<header>
+
     <!-- Header -->
         
         
             <div class="topnav" id="home"> 
                 <nav>
-                    <a href="./about.html">Sign In</a>
-                    <a href="contact.html">Contact Us</a>
-                    <a href="#locations">Destinations</a>
-                    <a href="home.html">Home</a>
-                    
+                    <a href="{{url_for('login')}}">Sign In</a>
+                    <a href="{{ url_for('contact')}}">Contact Us</a>
+                    <a href="{{ url_for('destinations') }}">Destinations</a>
+                    <a href="{{ url_for('home') }}">Home</a>
+
                     
                     
             
@@ -31,12 +32,16 @@
         <div class="title">
             <h1>Voyago</h1>
         </div>
- 
+            </div>
+</header>
+<body>
+
 <div class = "firstpic">
-    <img style="float: right; margin: 45px 45px 40px 30px;" src="Images/Ocean.jpeg" width="300"/>
-    </div>
+<!--    <img id="pic1" style="float: right; margin: 45px 45px 40px 30px; width: 400px; " src="{{url_for('static', filename='Ocean.jpeg')}}"/>-->
+<!--    </div>-->
     <div>
-       
+        <img id= "pic2" class = "firstpic" src="{{url_for('static', filename='Ocean.jpeg')}}"/>
+
         <div class = "tagline">
             <p>The ultimate destination for travel recommendations</p>
         </div>
@@ -60,28 +65,26 @@
   
         <div class="row">
 
-            <div class = "column" style="display: flex; max-width: 1200px; width: 100%; flex-wrap: wrap; justify-content: center; ">
-           <img src="Images/beachpic.jpg" alt="Beach" class = "destination">
-           <div class="overlay">
-            <div class = "text"> Beach</div>
-            <!-- <p>Beach</p> -->
-            
+           <div class = "column">
+           <img style = "width: auto; height: 200px; border-radius: 20px;"src="{{url_for('static', filename='beachpic.jpg')}}"/>
+            <p class = "country_subheading2">Beach</p>
+
 </div>
-</div>
+
         <div class = "column">
-           <img src="Images/budapest.jpg" alt="City Break" class = "destination">
-            <p>City Break</p>
+           <img style = "width: auto; height: 200px; border-radius: 20px;"src="{{url_for('static', filename='budapest.jpg')}}"/>
+            <p class = "country_subheading2">City Break</p>
             </div>
 
         <div class = "column">
-            <img src="Images/adventure.jpg" alt="Adventure" class = "destination">
-            <p>Adventure</p>
+            <img style = "width: auto; height: 200px; border-radius: 20px;" src="{{url_for('static', filename='adventure.jpg')}}"/>
+            <p class = "country_subheading2">Adventure</p>
              </div>
 
             <div class = "column">
-            <img src="Images/activity.jpg" alt="Activity" class = "destination">
+            <img style = "width: auto; height: 200px; border-radius: 20px;" src="{{url_for('static', filename='activity.jpg')}}"/>
     
-            <p>Activity</p>
+            <p class = "country_subheading2">Activity</p>
             </div>
        </div>
    </section>
@@ -91,7 +94,7 @@
 
 <div>
     <h2>Want to travel but don't know where? Let's find out!</h2>
-    <button type="button">Get Started!</button>
+    <a class = "quiz" href="quiz"><button>Get Started!</button></a>
 
 </div>
 
@@ -109,42 +112,41 @@
 
 
     <div class = "column2">
-        <img src="Images/Venice.webp" alt="Venice,Italy" class = "locations">
-        <p>Venice, Italy</p>
+        <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='Venice.webp')}}"/>
+        <p class = "country_subheading">Venice, Italy</p>
             </div>
 
             <div class = "column2">
-            <img src="Images/Keukenhof-Holland.jpg" alt="Amsterdam,Netherlands" class = "locations">
-        
-            <p>Amsterdam, Netherlands</p>
+            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='Keukenhof-Holland.jpg')}}"/>
+            <p class = "country_subheading">Amsterdam, Netherlands</p>
                 </div>
                 
                 <div class = "column2">
-                <img src="Images/mountain_cherry.jpg" alt="Yoshino.Japan" class = "locations">
+                <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='mountain_cherry.jpg')}}"/>
                 
-                <p>Yoshino, Japan</p>
+                <p class = "country_subheading">Yoshino, Japan</p>
                   </div>
                   
                   <div class = "column2">
-                    <img src="Images/Turks and Caicos .jpeg" alt="Turks and Caicos" class = "locations">
+                   <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='Turks and Caicos .jpeg')}}"/>
                
-                    <p>Turks and Caicos</p>
+                    <p class = "country_subheading">Turks and Caicos</p>
                   </div>
+
                   <div class = "column2">
-                        <img src="Images/denmark.jpg" alt="Copenhagen,Denmark" class = "locations">
-                
-                        <p>Copenhagen, Denmark</p>
+                       <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='denmark.jpg')}}"/>
+                        <p class = "country_subheading">Copenhagen, Denmark</p>
                     
                        </div>
+
                        <div class = "column2">
-                            <img src="Images/Algarve.jpeg" alt="Algarve,Portugal" class = "locations">
-                      
-                            <p>Algarve, Portugal</p>
+                           <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='Algarve.jpeg')}}"/>
+                            <p class = "country_subheading">Algarve, Portugal</p>
                     </div>
                     <div class = "column2">
-                        <img src="Images/marrakech.jpg" alt="Marrakech,Morroco" class = "locations">
-                  
-                        <p>Marrakech, Morroco</p>
+                      <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='marrakech.jpg')}}"/>
+                        <p class = "country_subheading">Marrakech, Morroco</p>
+
                 </div>
                                 </div>
                 
@@ -174,23 +176,18 @@
  <br>           
 <!-- Subscribe -->
 
-<div section = "marketing">
 <h2>Your travel journey starts here</h2>
 <p>Sign up for more travel tips and holiday inspirations straight to your inbox</p>
-<input type="text" placeholder="Email Address">
-<input type="text" placeholder="Full Name">
-<button type="button">Subscribe!</button>
 
+<a class = "subscribe" href="marketing"><button>Click to Subscribe!</button></a>
 </div>
-<br>
 
 
-
-<br>
 <!-- Footer -->
 
 
 <footer>
+
     <div class="navbar">
         <a href="#about" class="active">About</a>
         <a href="terms.html">Terms and Conditions</a>
@@ -204,7 +201,7 @@
       </div>
 </footer>
 
-</div>
+
 
 </body>
 </html>

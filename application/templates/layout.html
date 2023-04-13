@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!--INSERT CSS when completed here (Bootstrap CSS in use)-->
     <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
@@ -49,4 +50,57 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
+=======
+    <title>{{Title}}</title>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/Heart.png">
+   <link rel="stylesheet" href="{{url_for('static',filename = 'styles.css')}}"/>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css')}}"/>
+</head>
+<body>
+<header>
+
+    <div class= "topnav" id="home">
+                <nav>
+                    <a href="{{url_for('login')}}">Sign In</a>
+                    <a href="{{ url_for('contact')}}">Contact Us</a>
+                    <a href="{{ url_for('destinations') }}">Destinations</a>
+                    <a href="{{ url_for('home') }}">Home</a>
+
+
+
+
+   </nav>
+</div>
+        <div class="title">
+            <h1>Voyago</h1>
+        </div>
+            </div>
+</header>
+
+{% block main_content %}{% endblock %}
+
+
+<hr>
+<footer>
+
+      <div class="navbar">
+        <a href="#about" class="active">About</a>
+        <a href="terms.html">Terms and Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="sitemap">Sitemap</a>
+        <a href="#FAQ">FAQ</a>
+      </div>
+      <div class = "fineprint">
+        <h6>Sky Campus,Grant Way, Isleworth, TW5 5QD</h6>
+        <H6>&copy; 2023 Voyago Ltd @ Sky Get into Tech, All rights reserved.</H6>
+      </div>
+
+</footer>
+
+</body>
+
+>>>>>>> refs/remotes/origin/Salma
 </html>

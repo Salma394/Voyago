@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block main_content %}
+<div class = "form">
+        <form method="POST">
+
+
+           {{ form.first_name.label }} {{ form.first_name }}
+            <br>
+            {{ form.last_name.label }} {{ form.last_name }}
+            <br>
+             {{ form.email.label }} {{ form.email }}
+            <br>
+            {{ form.subscribe }}
+
+    </form>
+     </div>
+
+{% endblock %}
