@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %} Explore {{ data.city }} {% endblock %}
+
+{% block main_content %}
+
+<!--Main image-->
+{% block main_image %}<img src="{{ image_path }}" alt="{{ image_name }}">{% endblock %}
+
+<!--sidebar information items-->
+<div class="sidebar">
+  <ul>
+    <li>Climate: {{ data.climate }}</li>
+    <li>Year Quarterly Temperatures:</li>
+  <ul>
+    <li>Dec-Feb: {{ data.year_temperatures['dec_feb'] }}</li>
+    <li>Mar-May: {{ data.year_temperatures['mar_may'] }}</li>
+    <li>Jun-Aug: {{ data.year_temperatures['jun_aug'] }}</li>
+    <li>Sep-Nov: {{ data.year_temperatures['sep_nov'] }}</li>
+  </ul>
+    <li>Currency: {{ data.currency }}</li>
+    <li>Languages: {{ data.languages }}</li>
+    <li>Religion: {{ data.religion }}</li>
+  </ul>
+</div>
+
+<!--Overview text-->
+{% block description %}{% endblock %}
+
+{% endblock %}
