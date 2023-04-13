@@ -104,3 +104,6 @@ def marketing():
 
     return  render_template('marketing.html', title = "Marketing", form= form, message= error)
 
+@app.route('/quiz',methods=['GET','POST'])
+def quiz():
+    return render_template('quiz.html')
