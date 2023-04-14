@@ -13,19 +13,15 @@
         <ul>
             <li>Climate: {{ location.climate }}</li>
 
-            {% for months, temperature in location.temperatures.items() %}
+            {% for quarter in location.temperatures %}
 
-            <li>{{ months }}: {{ temperature }}&deg;C</li>
+            <li>{{ quarter.quarter_title }}: {{ quarter.average_temperature }}&deg;C</li>
 
             {% endfor %}
 
-            <li>Dec-Feb: {{ dec_feb }}&deg;C</li>
-            <li>Mar-May: {{ mar_may }}&deg;C</li>
-            <li>Jun-Aug: {{ jun_aug }}&deg;C</li>
-            <li>Sep-Nov: {{ sep_nov }}&deg;C</li>
 
             <li>Currency: {{ location.currency }}</li>
-            <li>Languages: {{ location.languages }}</li>
+            <li>Languages: {{ location.language }}</li>
         </ul>
     </div>
 

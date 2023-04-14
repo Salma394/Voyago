@@ -68,6 +68,18 @@ class LocationDbModel:
 
             result[category].append({"image_path": item["image_path"], "image_alt": item["image_alt"]})
 
-        print(result)
         return result
+
+    def get_location_temperatures(self, city):
+        with self.conn.cursor() as cursor:
+            query = '''
+            SELECT q.quarter_title, qi.average_temperature
+            FROM quarters as q
+            INNER JOIN year_quarter_info as qi ON q.quarter_id = qi.quarter_id
+            INNER JOIN location as l ON qi.city_id = l.city_id
+
+            WHERE l.city = %s;
+            '''
+            cursor.execute(query, city)
+            return cursor.fetchall()
 

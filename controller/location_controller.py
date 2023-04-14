@@ -25,6 +25,8 @@ class LocationController:
             #                         accommodation_image_data] if accommodation_image_data else []
 
             images = self.model.get_location_image_data(city)
+            temperatures = self.model.get_location_temperatures(city)
+            print(temperatures)
 
             return Location(
                 city=city,
@@ -36,6 +38,7 @@ class LocationController:
                 religion=location_data['religion'],
                 transport=location_data['transport'],
                 images=images,
+                temperatures=temperatures,
                 description_text=location_data['description_text'],
                 activity_description_text=location_data['activity_description_text'],
                 traveller_tip_text=location_data['traveller_tip_text']
