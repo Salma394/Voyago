@@ -2,6 +2,9 @@ from flask import render_template
 from application import app
 from controller.location_controller import LocationController
 
+# instantiate LocationController
+location_controller = LocationController()
+
 
 @app.route('/')
 @app.route('/index')
@@ -54,14 +57,27 @@ def about():
 #     year_temperatures = location_obj.get_year_temperatures()
 #     return render_template('location.html', climate=climate, currency=currency, languages=languages, religion=religion, year_temperatures=year_temperatures)
 
+#
+# @app.route('/<location>')
+# def location(city):
+#     controller = LocationController()
+#     data = controller.get_location(city)
+#     if data:
+#         return render_template('location.html', data=data)
+#     else:
+#         return render_template('404.html'), 404
 
-@app.route('/<location>')
+@app.route('/location/<city>')
 def location(city):
-    controller = LocationController()
-    data = controller.get_location(city)
-    if data:
-        return render_template('location.html', data=data)
+    # get location data from the database
+    location = location_controller.get_location(city)
+
+    if location:
+        # render the location template with the location data
+        return render_template('location.html', location=location)
+
     else:
+        # render a 404 page if the location isn't found
         return render_template('404.html'), 404
 
 

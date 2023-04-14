@@ -9,19 +9,36 @@ class LocationController:
     def get_location(self, city):
         location_data = self.model.get_location_data(city)
         if location_data:
-            year_temperatures = {
-                'dec_feb': location_data['dec_feb'],
-                'mar_may': location_data['mar_may'],
-                'jun_aug': location_data['jun_aug'],
-                'sep_nov': location_data['sep_nov']
-            }
+            # # fetch main image data (single)
+            # main_image_data = self.model.get_location_image_data(city, 'main')
+            # main_image_path_data = main_image_data[0]['image_path'] if main_image_data else None
+            # main_image_alt = main_image_data[0]['image_alt'] if main_image_data else None
+            #
+            # # fetch attraction image data (multiple)
+            # attraction_image_data = self.model.get_location_image_data(city, 'activity')
+            # attraction_images = [(img['image_path'], img['image_alt']) for img in
+            #                      attraction_image_data] if attraction_image_data else []
+            #
+            # # fetch accommodation image data (multiple)
+            # accommodation_image_data = self.model.get_location_image_data(city, 'accommodation')
+            # accommodation_images = [(img['image_path'], img['image_alt']) for img in
+            #                         accommodation_image_data] if accommodation_image_data else []
+
+            images = self.model.get_location_image_data(city)
+
             return Location(
                 city=city,
+                country=location_data['country'],
                 climate=location_data['climate'],
+                location_type=location_data['location_type'],
                 currency=location_data['currency'],
-                languages=location_data['languages'],
+                language=location_data['language'],
                 religion=location_data['religion'],
-                year_temperatures=year_temperatures
+                transport=location_data['transport'],
+                images=images,
+                description_text=location_data['description_text'],
+                activity_description_text=location_data['activity_description_text'],
+                traveller_tip_text=location_data['traveller_tip_text']
             )
         else:
             return None

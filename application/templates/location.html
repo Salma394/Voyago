@@ -1,30 +1,61 @@
-{% extends "layout.html" %}
+{% extends 'layout.html' %}
 
-{% block title %} Explore {{ data.city }} {% endblock %}
+{% block title %}
+    Explore {{ location.city }}
+{% endblock %}
 
 {% block main_content %}
 
-<!--Main image-->
-{% block main_image %}<img src="{{ image_path }}" alt="{{ image_name }}">{% endblock %}
+    <img src="/static/images/{{ location.images.main[0]['image_path'] }}" alt="{{ location.images.main[0]['image_alt'] }}">
 
-<!--sidebar information items-->
-<div class="sidebar">
-  <ul>
-    <li>Climate: {{ data.climate }}</li>
-    <li>Year Quarterly Temperatures:</li>
-  <ul>
-    <li>Dec-Feb: {{ data.year_temperatures['dec_feb'] }}</li>
-    <li>Mar-May: {{ data.year_temperatures['mar_may'] }}</li>
-    <li>Jun-Aug: {{ data.year_temperatures['jun_aug'] }}</li>
-    <li>Sep-Nov: {{ data.year_temperatures['sep_nov'] }}</li>
-  </ul>
-    <li>Currency: {{ data.currency }}</li>
-    <li>Languages: {{ data.languages }}</li>
-    <li>Religion: {{ data.religion }}</li>
-  </ul>
-</div>
+    <div class="overview">
+        <h2>Overview</h2>
+        <ul>
+            <li>Climate: {{ location.climate }}</li>
 
-<!--Overview text-->
-{% block description %}{% endblock %}
+            {% for months, temperature in location.temperatures.items() %}
+
+            <li>{{ months }}: {{ temperature }}&deg;C</li>
+
+            {% endfor %}
+
+            <li>Dec-Feb: {{ dec_feb }}&deg;C</li>
+            <li>Mar-May: {{ mar_may }}&deg;C</li>
+            <li>Jun-Aug: {{ jun_aug }}&deg;C</li>
+            <li>Sep-Nov: {{ sep_nov }}&deg;C</li>
+
+            <li>Currency: {{ location.currency }}</li>
+            <li>Languages: {{ location.languages }}</li>
+        </ul>
+    </div>
+
+    <div class="further_info">
+        <h2>Further Information</h2>
+        <ul>
+            <li>Religion: {{ location.religion }}</li>
+            <li>Transport: {{ location.transport }}</li>
+        </ul>
+    </div>
+
+    <p>About {{ location.city }}</p>
+    <p>{{ description_text }}</p>
+
+    <p>What to do in {{ location.city }}</p>
+    <p>{{ location.activity_description_text }}</p>
+
+    {% for attraction_image_data in location.images.attraction %}
+        <img src="/static/images/{{ attraction_image_data['image_path'] }}" alt="{{ attraction_image_data['image_alt'] }}">
+    {% endfor %}
+
+    <p>Where to stay in {{ location.city }}</p>
+
+    {% for accommodation_image_data in location.images.accommodation %}
+        <img src="/static/images/{{ accommodation_image_data['image_path'] }}" alt="{{ accommodation_image_data['image_alt'] }}">
+    {% endfor %}
+
+    {% if location.traveller_tip_text %}
+        <p>Travellers' Tips</p>
+        <p>{{ location.traveller_tip_text }}</p>
+    {% endif %}
 
 {% endblock %}
