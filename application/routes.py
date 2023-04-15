@@ -5,7 +5,7 @@ from application.forms import RegisterForm
 from application.forms import LoginForm
 from application.data_provider_service import DataProviderService
 DATA_PROVIDER = DataProviderService()
-
+from passlib.hash import sha256_crypt
 @app.route('/home',methods=['GET'])
 def home():
     return render_template('home.html')
@@ -18,26 +18,20 @@ def destinations():
 def contact():
     return render_template('contact.html')
 
-@app.route('/login',methods=['GET','POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-
-        message = ""
-
-        form = LoginForm()
-
-        if request.method == 'POST' and 'email'in request.form and 'password' in request.form:
-            email = form.email.data
-            password = form.password.data
-
-            if (email,password) == 'email' in request.form and 'password' in request.form:
-
-                return render_template('success.html',form=form, message="Thank you for logging in!")
-
+    error = ""
+    form = LoginForm()
+    if form.validate_on_submit():
+        email = form.email.data
+        password = form.password.data
+        if user_authentication.login(email, password):
+            session['user_id'] = user_authentication.get_user_id(email)
+            session['user_name'] = user_authentication.get_user_name(email)
+            return redirect(url_for('profile'))
         else:
-
-              message = 'Please try again!'
-
-        return render_template('login.html', title="Logged In", form=form, message=message)
+            error = 'Invalid email or password'
+    return render_template('login.html', form=form, error=error)
 
 
 @app.route('/register',methods=['GET','POST'])
@@ -50,7 +44,7 @@ def register():
         first_name = form.first_name.data
         last_name = form.last_name.data
         email = form.email.data
-        password = form.password
+        password = sha256_crypt.encrypt(form.password.data)
 
         if len(first_name) == 0:
             error = 'First name cannot be blank!'

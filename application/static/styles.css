@@ -8,7 +8,7 @@
 h1{
     font-size: 70px;
     color:#606060 ;
-   
+
     opacity: 37%;
 }
 
@@ -16,7 +16,7 @@ h1{
     background-color:c0c0c0;
     overflow: hidden;
   }
-  
+
   /* Style the links inside the navigation bar */
   .topnav a {
     float: right;
@@ -26,13 +26,13 @@ h1{
     text-decoration: none;
     font-size: 20px;
   }
-  
+
   /* Change the color of links on hover */
   .topnav a:hover {
     background-color:#606060;
     color: whitesmoke;
   }
-  
+
   /* Add a color to the active/current link */
   .topnav a.active {
     background-color: #04AA6D;
@@ -55,7 +55,7 @@ h1{
 	letter-spacing: -0.5px;
 	text-align: left;
 }
-  
+
   .paragraph1 {
     width: 480px;
     height: 120px;
@@ -69,7 +69,13 @@ h1{
   }
 
 .firstpic{
-      border-radius: 75%
+      border-radius: 60px
+      width: auto;
+      height:400px;
+      position: relative;
+      left:50%;
+      top:10px
+
 
   }
 
@@ -86,7 +92,7 @@ h1{
   width: auto;
   height: 200px;
   border-radius: 20px;
-} 
+}
 
 .row {
   display: flex;
@@ -143,7 +149,79 @@ font-size: 25px;
 font-size: 20px;
 }
 
-.loginform{
-
-
+.navbar-nav {
+  float: right;
 }
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    float: none;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  margin: 0;
+}
+
+.navbar-nav {
+  margin: 0;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.container {
+  background-color: #FFFEF2;
+}
+
+.form-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0069d9;
+  }
+

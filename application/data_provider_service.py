@@ -1,5 +1,5 @@
 import pymysql
-# from passlib.hash import sha256_crypt
+from passlib.hash import sha256_crypt
 class DataProviderService:
     def __init__(self):
         """
@@ -28,17 +28,26 @@ class DataProviderService:
         new_person = self.cursor.fetchone()
         return new_person[0]
 
+    # def login(self, email, password):
+    #     successful_login = False
+    #     sql = "SELECT * FROM users WHERE email = %s AND password = %s"
+    #     input_values = (email, password)
+    #     self.cursor.execute(sql, input_values)
+    #     user = self.cursor.fetchone()
+    #     if user:
+    #         session['email'] = user[1]
+    #         successful_login = True
+    #     return successful_login
+
     def login(self, email, password):
-
-        succesful_login = []
-        sql = "SELECT * FROM user WHERE email = %s AND password = %s"
-        self.cursor.execute(sql)
-        input_values = (email,password)
+        sql = "SELECT * FROM user WHERE email = %s"
+        input_values = (email,)
         self.cursor.execute(sql, input_values)
-        login = self.cursor.fetchall(email,password)
-        if login == email and password:
-                return succesful_login
-
+        user = self.cursor.fetchone()
+        if user and sha256_crypt.verify(password, user['password']):
+            return user
+        else:
+            return None
 
     def add_user(self, firstname, lastname,email,password):
         sql = """insert into user (firstname, lastname,email,password) values (%s, %s, %s,%s)"""

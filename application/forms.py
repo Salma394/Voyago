@@ -24,3 +24,6 @@ class LoginForm(FlaskForm):
     email = StringField('Email')
     password = PasswordField('Password')
     login = SubmitField('Log In')
+
+class LogOutForm(FlaskForm):
+    submit = SubmitField('Log Out')
