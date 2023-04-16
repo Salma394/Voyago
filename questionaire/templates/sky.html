@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<nav>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="{{ url_for('render_about') }}">About GiT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('render_techskills') }}">Tech & Skills</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="{{ url_for('render_sky') }}">Sky</a>
+    </li>
+  </ul>
+</nav>
+
+<main>
+  <!-- For the image to show, we have to include the JPEG into the static directory and the SRC shall then
+       be the relative path onto that folder. I have added the <div class="content_container"> for padding and also
+       an additional class name within img so we can adjust the height/with -->
+  <div class="content_container">
+    <img id="sky_logo" src="/static/new_sky_logo.jpeg" alt="Sky logo">
+  </div>
+  
+<div class="container-fluid">
+
+  <!-- div with class="content_container" added so the block has same padding/margin accross all pages-->
+  <div class="content_container">
+    <h1>Company history</h1>
+    <p> Initially formed in 1990 by the equal merger of Sky Television and British Satellite Broadcasting, BSkyB became the UK's largest digital pay television company. In 2014, after completing the acquisition of Sky Italia and Sky Deutschland, the merged company changed its name to Sky plc.
+    </p>
+  </div>
+
+  <!-- div with class="content_container" added so the block has same padding/margin accross all pages-->
+  <div class="content_container">
+    <h2>Tech at Sky</h2>
+    <p>And we make it happen.
+  
+      You might know Sky for TV but we're more than that. We're all about building the next and the new.
+
+      We're broadband and broadcasting, streaming and sports. Mobile and movies, production and premieres. We're the link between millions of customers and the things they love.
+
+      We're Sky's Tech, Product and Data teams.
+    </p>
+  </div>
+
+  <!-- div with class="content_container" added so the block has same padding/margin accross all pages-->
+  <div class="content_container">
+    <h2>Find out more about Sky and women in tech at Sky below</h2>
+    <!-- target="_blank" added so the links open in a new tab-->
+    <a href="https://www.skygroup.sky/" target="_blank" class="btn btn-secondary" tabindex="-1" role="button"
+       aria-disabled="true">The wider Sky group</a>
+
+    <a href="https://www.skygroup.sky/bigger-picture/skywomenintechscholars-learn-more" target="_blank" class="btn btn-secondary" tabindex="-1" role="button"
+      aria-disabled="true">Women in tech</a>
+
+    <!-- The below is using code for the submission of a form. In this scenario we are not submitting a form, is just a button with a link to another page so I have replaced the code.
+      The previous code was:
+      <form action="https://careers.sky.com/earlycareers/" class="btn role="button" aria-pressed="true">
+        <input type="submit" value="Early careers" />
+    </form> 
+    
+      <form action="https://www.skygroup.sky/bigger-picture/skywomenintechscholars" class="btn role="button" aria-pressed="true">
+        <input type="submit" value="Women" />
+      -->
+  </div>
+
+</div>
+
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <div class="button_container">
+      <a href="{{ url_for('render_applicationform') }}"><button class="btn btn-primary apply_button" type="button">Apply
+          to Sky Get Into Tech</button></a>
+    </div>
+  </div>
+
+</main>
+{% endblock %}

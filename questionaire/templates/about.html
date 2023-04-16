@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<nav>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ url_for('render_about') }}">About GiT</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('render_techskills') }}">Tech & Skills</a>
+        </li>
+        <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('render_sky') }}">Sky</a>
+    </li>
+    </ul>
+</nav>
+
+<main>
+    <div class="content_container">
+        <h2>What is Sky GiT?</h2>
+        <p>Sky's Get into Tech initiative aims to provide a unique and supportive environment in which women with little or no
+        previous technical experience can learn some of the skills necessary to begin a career in technology. Sky recognises the
+        significant lack of gender diversity in the IT industry, and we believe that encouraging capable, talented women into
+        technical roles can bring enormous benefits, both to the women themselves, and also to the teams and companies they end
+        up working with. By introducing more women into this talent pool, we hope to increase diversity in the technology teams
+        at Sky.</p>
+        
+        <p>Our courses provide beginner level training which aim to give you the skills necessary to apply for entry level jobs. By
+        the end of one of our courses you will be equipped with the technical skills you need to embark on a number of different
+        routes into the industry. We hope you will leave the Academy inspired and empowered, and in a strong position to apply
+        for permanent roles should you wish to.</p>
+        
+        <p>Our original Get Into Tech course has been successfully running for a number of years. This teaches the fundamentals of
+        software development and provides skills to embark on a successful career in this growing industry.</p>
+        
+        <p>We're now also offering a week long training course with our TV Operations department. Learn how we broadcast
+        high-quality content, as well as the types of roles we offer in another key, tech-focused area.</p>
+    </div>
+   
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <div class="button_container">
+            <a href="{{ url_for('render_applicationform') }}"><button class="btn btn-primary apply_button" type="button">Apply to Sky Get Into Tech</button></a>
+        </div>
+    </div>
+   
+
+
+</main>
+{% endblock %}

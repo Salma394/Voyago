@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<nav>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="{{ url_for('render_about') }}">About GiT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('render_techskills') }}">Tech & Skills</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('render_sky') }}">Sky</a>
+    </li>
+  </ul>
+</nav>
+
+<main>
+  <h2>Registration successful!</h2>
+</main>
+{% endblock %}

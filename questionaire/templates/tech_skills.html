@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<nav>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="{{ url_for('render_about') }}">About GiT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="{{ url_for('render_techskills') }}">Tech & Skills</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('render_sky') }}">Sky</a>
+    </li>
+  </ul>
+</nav>
+
+<main>
+
+  <div class="content_container">
+    <h2>Skills needed</h2>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Communication</li>
+      <li class="list-group-item">Analytical and logical thinking</li>
+      <li class="list-group-item">Creativity</li>
+      <li class="list-group-item">Self Motivated</li>
+    </ul>
+  </div>
+
+  <div class="content_container">
+    <h2>Tech Stack</h2>
+    <p>During the 15 week course you will learn about:</p>
+    <div class="main_content_container"></div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Agile</li>
+        <li class="list-group-item">HTML</li>
+        <li class="list-group-item">CSS</li>
+        <li class="list-group-item">Bootstrap</li>
+        <li class="list-group-item">JavaScript</li>
+        <li class="list-group-item">Python</li>
+        <li class="list-group-item">MySQL</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <div class="button_container">
+      <a href="{{ url_for('render_applicationform') }}"><button class="btn btn-primary apply_button" type="button">Apply to Sky Get Into Tech</button></a>
+    </div>
+  </div>
+
+</main>
+{% endblock %}
