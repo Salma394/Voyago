@@ -35,9 +35,17 @@ INSERT INTO year_quarter_info (city_id, quarter_id, average_temperature) VALUES
 INSERT INTO image (city_id, image_category_id, image_path, image_alt)
 VALUES (1, 2, 'newyork-landmarks.jpg', 'Statue of Liberty and Empire State Building'),
 (1, 3, 'newyork-hotel.jpg', 'Times Square Hotel'),
+
 (2, 1, 'paris-main.jpg', 'The City of Paris'),
-(2, 2, 'paris-landmarks.jpg', 'Eiffel Tower and Notre-Dame Cathedral'),
-(2, 3, 'paris-hotel-breakfast.jpg', 'Croissants and macarons'),
-(3, 1, 'tokyo-landmarks.jpg', 'Tokyo Tower and Senso-ji Temple'),
-(3, 3, 'tokyo-hotel-food.jpg', 'Sushi and ramen'),
+(2, 2, 'paris-attraction.jpg', 'Eiffel Tower'),
+(2, 2, 'paris-attraction-2.jpg', 'Notre-Dame Cathedral'),
+(2, 3, 'paris-hotel.jpg', 'Hotel lobby'),
+(2, 3, 'paris-hotel.jpg', 'Paris Hotel'),
+
+(3, 1, 'tokyo-main.jpg', 'Tokyo Tower and Senso-ji Temple'),
+(3, 2, 'tokyo-attraction.jpg', 'Senso-ji Temple'),
+(3, 2, 'tokyo-landmarks.jpg', 'Tokyo Tower'),
+(3, 2, 'tokyo-food.jpg', 'Sushi and ramen'),
+(3, 3, 'tokyo-hotel.jpg', 'Tokyo Hotel'),
+
 (4, 2, 'riodejaneiro-landmarks.jpg', 'Landmarks');

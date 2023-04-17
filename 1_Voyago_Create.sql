@@ -79,11 +79,11 @@ CREATE TABLE image_category (
 );
 
 CREATE TABLE image (
+    image_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     city_id INT NOT NULL,
     image_category_id INT NOT NULL,
     image_path VARCHAR(100) NOT NULL,
     image_alt VARCHAR(100) NOT NULL,
-    PRIMARY KEY (city_id, image_category_id),
     CONSTRAINT fk_location_i FOREIGN KEY (city_id) REFERENCES location(city_id),
     CONSTRAINT fk_image_category FOREIGN KEY (image_category_id) REFERENCES image_category(image_category_id)
 );
