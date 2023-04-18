@@ -1,9 +1,0 @@
-{% extends "layout.html" %}
-{% block body_content %}
-    <p>Welcome to our People page.</p>
-<ul>
-{% for person in people %}
-<li>{{ person[0] }} {{ person[1]}} {{ person[2] }}</li>
-    {% endfor %}
-</ul>
-{% endblock %}

@@ -102,25 +102,31 @@ def index(name, age):
 # References re naming/structure of directory: https://thinkinfi.com/flask-adding-html-and-css/
 # USED: layout html template + bootstrap navbar and lists + directory standard structure templates/static, Jinja
 # Using render_template() instead of slurping the html text. This way we can use CSS and Bootstrap styling
-@app.route('/')
-def render_quiz_homepage():
+# @app.route('/')
+# def render_quiz_homepage():
     return render_template("quiz_homepage.html")
 
-@app.route('/countryquiz')
-def render_countryquiz():
-    return render_template("countryquiz.html")
+# @app.route('/countryquiz')
+# def render_countryquiz():
+#     return render_template("countryquiz.html")
 
-@app.route('/countryquiz2')
-def render_countryquiz2():
-    return render_template("countryquiz2.html")
+# @app.route('/countryquiz2')
+# def render_countryquiz2():
+#     return render_template("countryquiz2.html")
 
-@app.route('/countryquiz3')
-def render_countryquiz3():
-    return render_template("countryquiz3.html")
+# @app.route('/countryquiz3')
+# def render_countryquiz3():
+#     return render_template("countryquiz3.html")
 
-@app.route('/countryquiz4')
-def render_countryquiz4():
-    return render_template("countryquiz4.html")
+# @app.route('/countryquiz4')
+# def render_countryquiz4():
+#     return render_template("countryquiz4.html")
+
+@app.route('/personality_style')
+def personality_style():
+    return render_template("personality_style.html")
+
+
 
 # Followed the explanation from https://www.geeksforgeeks.org/retrieving-html-from-data-using-flask/
 # This function will check if we have data for the 3 required fields within the FORM in application_form.html
