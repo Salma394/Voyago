@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{Title}}</title>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{url_for('static',filename = 'styles.css')}}"/>
+ <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css')}}"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<header>
+
+<!-- Header -->
+  <!-- Navbar -->
+    <div class= "topnav" id="home">
+      <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+                    <!-- hamburger icon -->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="static/Heart.png" width="50" height="50"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <div class="nav navbar-nav navbar-right">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('destinations') }}">Destinations</a></li>
+                    <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
+                   <li><a href="{{url_for('login')}}">Sign In</a></li>
+            </div>
+            </div>
+        </div>
+   </nav>
+</div>
+        <div class="title">
+            <h1>Voyago</h1>
+        </div>
+            </div>
+</header>
+<body>
+
+
+{% block main_content %}{% endblock %}
+
+
+<hr>
+<footer>
+
+      <div class="navbar">
+        <a href="#about" class="active">About</a>
+        <a href="terms.html">Terms and Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="sitemap">Sitemap</a>
+        <a href="#FAQ">FAQ</a>
+      </div>
+      <div class = "fineprint">
+        <h6>Sky Campus,Grant Way, Isleworth, TW5 5QD</h6>
+        <H6>&copy; 2023 Voyago Ltd @ Sky Get into Tech, All rights reserved.</H6>
+      </div>
+
+</footer>
+<!--navbar-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
