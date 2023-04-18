@@ -4,7 +4,26 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+.result-box ul{
+    border-top: 1px solid #999;
+    padding: 15px 10px;
+}
+/* for suggested countries when user searches on the website*/
+.result-box ul li{
+    list-style-type: square;
+    border-radius: 3px;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+.result-box ul li:hover{
+    /* background: #e9f3ff; */
+    background: limegreen;
+}
 
+.result-box{
+   max-height: 300px;
+   overflow-y: scroll; 
+}
 .search-box{
     width: 600px;
     background: #fff;
@@ -39,22 +58,3 @@ button .fa-solid{
 ::placeholder{
     color:#555;
 } 
-.result-box ul{
-    border-top: 1px solid #999;
-    padding: 15px 10px;
-}
-/* for suggested countries when user searches on the website*/
-.result box ul li{
-    list-style: none;
-    border-radius: 3px;
-    padding: 15px 10px;
-    cursor: pointer;
-}
-.result-box ul li:hover{
-    background: #e9f3ff;
-}
-
-.result-box{
-   max-height: 300px;
-   overflow-y: scroll; 
-}
