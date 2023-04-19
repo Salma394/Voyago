@@ -19,3 +19,14 @@ __pycache__/
 
 # Virtual environment
 venv/
+
+.idea/
+.DS_Store 
+/venv
+.idea
+.DS_Store
+.idea/workspace.xml
+application/.DS_Store
+application/static/.DS_Store
+__pycache__
+

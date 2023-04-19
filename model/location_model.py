@@ -7,7 +7,7 @@ class Location:
         self.language = language.capitalize()
         self.location_type = location_type.capitalize()
         self.transport = transport.capitalize()
-        self.currency = currency.UPPER()
+        self.currency = currency
         self.climate = climate.capitalize()
         self.religion = religion.capitalize()
         self.temperatures = temperatures

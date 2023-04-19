@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block main_content %}
+<div class="container">
+  <h2>Contact Us</h2>
+  <form method="post" action="{{ url_for('contact') }}">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+      {{ form.name.label(class="form-control-label") }}
+      {{ form.name(class="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ form.email.label(class="form-control-label") }}
+      {{ form.email(class="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ form.subject.label(class="form-control-label") }}
+      {{ form.subject(class="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ form.message.label(class="form-control-label") }}
+      {{ form.message(class="form-control") }}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+
+{% endblock %}
