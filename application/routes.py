@@ -1,20 +1,49 @@
 from flask import render_template, request,redirect, url_for, session
 from application import app
+from controller.location_controller import LocationController
 from application.forms import BasicForm
 from application.forms import RegisterForm
 from application.forms import LoginForm
 from application.forms import ContactForm
 from application.data_provider_service import DataProviderService
-DATA_PROVIDER = DataProviderService()
 from passlib.hash import sha256_crypt
 import pymysql
+
+# instantiate DataProviderService
+DATA_PROVIDER = DataProviderService()
+# instantiate LocationController
+location_controller = LocationController()
+
+
+@app.route('/')
+@app.route('/index')
 @app.route('/home',methods=['GET'])
 def home():
     return render_template('home.html')
 
+
 @app.route('/destinations',methods=['GET'])
 def destinations():
     return render_template('destinations.html')
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html', title='About')
+
+
+@app.route('/location/<city>')
+def location(city):
+    # get location data from the database
+    location = location_controller.get_location(city)
+
+    if location:
+        # render the location template with the location data
+        return render_template('location.html', location=location)
+
+    else:
+        # render a 404 page if the location isn't found
+        return render_template('404.html'), 404
 
 
 @app.route('/login/register',methods=['GET','POST'])
@@ -49,13 +78,16 @@ def register():
 def terms():
     return render_template('terms.html')
 
+
 @app.route('/profile',methods=['GET'])
 def profile():
     return render_template('profile.html')
 
+
 @app.route('/privacy',methods=['GET'])
 def privacy():
     return render_template('privacy.html')
+
 
 @app.route('/marketing',methods=['GET','POST'])
 def marketing():
@@ -90,6 +122,7 @@ def marketing():
 
 data_provider = DataProviderService()
 
+
 @app.route('/login/', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
@@ -116,10 +149,10 @@ def logout():
         return render_template('error.html', error=error)
 
 
-
 @app.route('/quiz',methods=['GET','POST'])
 def quiz():
     return render_template('quiz.html')
+
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
@@ -147,3 +180,8 @@ def contact():
             return render_template('success.html', success_message=success)
 
     return render_template('contact.html', form=form,error=error)
+
+
+@app.errorhandler(404)
+def page_not_found():
+    return render_template('404.html'), 404

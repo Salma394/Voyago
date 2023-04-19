@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Explore {{ location.city }}
+{% endblock %}
+
+{% block main_content %}
+
+    <img src="/static/images/{{ location.images.main[0]['image_path'] }}" alt="{{ location.images.main[0]['image_alt'] }}">
+
+    <div class="overview">
+        <h2>Overview</h2>
+        <ul>
+            <li>Climate: {{ location.climate }}</li>
+
+            {% for quarter in location.temperatures %}
+
+            <li>{{ quarter.quarter_title }}: {{ quarter.average_temperature }}&deg;C</li>
+
+            {% endfor %}
+
+
+            <li>Currency: {{ location.currency }}</li>
+            <li>Languages: {{ location.language }}</li>
+        </ul>
+    </div>
+
+    <div class="further_info">
+        <h2>Further Information</h2>
+        <ul>
+            <li>Religion: {{ location.religion }}</li>
+            <li>Transport: {{ location.transport }}</li>
+        </ul>
+    </div>
+
+    <p>About {{ location.city }}</p>
+    <p>{{ location.description_text }}</p>
+
+    <p>What to do in {{ location.city }}</p>
+    <p>{{ location.activity_description_text }}</p>
+
+    {% for attraction_image_data in location.images.attraction %}
+        <img src="/static/images/{{ attraction_image_data['image_path'] }}" alt="{{ attraction_image_data['image_alt'] }}">
+    {% endfor %}
+
+    <p>Where to stay in {{ location.city }}</p>
+
+    {% for accommodation_image_data in location.images.accommodation %}
+        <img src="/static/images/{{ accommodation_image_data['image_path'] }}" alt="{{ accommodation_image_data['image_alt'] }}">
+    {% endfor %}
+
+    {% if location.traveller_tip_text %}
+        <p>Travellers' Tips</p>
+        <p>{{ location.traveller_tip_text }}</p>
+    {% endif %}
+
+{% endblock %}
