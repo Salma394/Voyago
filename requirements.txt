@@ -1,0 +1,6 @@
+Flask
+pymysql
+wtforms
+flask_wtf
+passlib
+

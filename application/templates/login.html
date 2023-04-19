@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block main_content %}
+<div class = "form-container">
+        <form method="POST">
+
+             {{ form.email.label }} {{ form.email }}
+            <br>
+             {{ form.password.label }} {{ form.password }}
+            <br>
+
+ <button type="login" class="btn btn-primary">Sign In</button>
+    </form>
+     </div>
+
+<a href="register"><button type="register" class="btn btn-primary">Register</button></a>
+
+{% endblock %}
