@@ -1,5 +1,6 @@
 import pymysql
 from passlib.hash import sha256_crypt
+from flask import session
 class DataProviderService:
     def __init__(self):
         """
@@ -40,18 +41,28 @@ class DataProviderService:
     #     return successful_login
 
     def login(self, email, password):
-        sql = "SELECT * FROM user WHERE email = %s"
+        sql = "SELECT password FROM user WHERE email = %s"
         input_values = (email,)
         self.cursor.execute(sql, input_values)
-        user = self.cursor.fetchone()
-        if user and sha256_crypt.verify(password, user['password']):
-            return user
+        result = self.cursor.fetchone()
+        if result:
+            hashed_password = result[0]
+            if sha256_crypt.verify(password, hashed_password):
+                return True, "Login successful!"
+            else:
+                return False, "Incorrect password"
         else:
-            return None
+            return False, "User not found"
 
-    def add_user(self, firstname, lastname,email,password):
-        sql = """insert into user (firstname, lastname,email,password) values (%s, %s, %s,%s)"""
-        input_values = (firstname, lastname,email,password)
+    def logout(self):
+        session.pop('user_id', None)
+        session.pop('user_email', None)
+        session.pop('user_name', None)
+        return True, 'Logout successful'
+
+    def add_user(self, firstname, lastname, email, password):
+        sql = """INSERT INTO user (firstname, lastname, email, password) VALUES (%s, %s, %s, %s) ON DUPLICATE KEY UPDATE firstname=VALUES(firstname), lastname=VALUES(lastname), password=VALUES(password)"""
+        input_values = (firstname, lastname, email, password)
         try:
             self.cursor.execute(sql, input_values)
             self.conn.commit()
@@ -59,8 +70,24 @@ class DataProviderService:
             print(exc)
             self.conn.rollback()
             print("rolled back")
-        sql_register_id = "select id from user order by id desc limit 1"
-        self.cursor.execute(sql_register_id)
-        user = self.cursor.fetchone()
-        return user[0]
+        sql_get_user_id = "SELECT id FROM user WHERE email = %s"
+        self.cursor.execute(sql_get_user_id, (email,))
+        user_id = self.cursor.fetchone()[0]
+        return user_id
+
+    def add_query(self,name,email,subject,message):
+        sql = """insert into contact_us (name,email,subject,message) values (%s, %s, %s,%s)"""
+        input_values = (name, email, subject, message)
+        try:
+            self.cursor.execute(sql, input_values)
+            self.conn.commit()
+        except Exception as exc:
+            print(exc)
+            self.conn.rollback()
+            print("rolled back")
+        sql_new_query = "select id from contact_us order by id desc limit 1"
+        self.cursor.execute(sql_new_query)
+        new_query = self.cursor.fetchone()
+        return new_query[0]
+
 

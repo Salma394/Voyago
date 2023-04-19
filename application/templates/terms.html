@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
+	{% extends "layout.html" %}
+{% block main_content %}
 	<title>Terms and Conditions</title>
    <link rel="stylesheet" href="{{url_for('static',filename = 'styles.css')}}"/>
-</head>
-<body>
-	<h1>Terms and Conditions</h1>
+
+	<h2>Terms and Conditions</h2>
 	<p>Please read these Terms and Conditions carefully before using our travel recommendations site.</p>
 	
 	<h2>Disclaimer</h2>
@@ -28,5 +26,7 @@
 
 	<h2>Contact Us</h2>
 	<p>If you have any questions or concerns regarding these Terms and Conditions, please contact us at Voyago@gmail.com.</p>
-</body>
-</html>
+
+
+
+{% endblock %}

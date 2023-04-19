@@ -1,11 +1,13 @@
-from flask import render_template, request
+from flask import render_template, request,redirect, url_for, session
 from application import app
 from application.forms import BasicForm
 from application.forms import RegisterForm
 from application.forms import LoginForm
+from application.forms import ContactForm
 from application.data_provider_service import DataProviderService
 DATA_PROVIDER = DataProviderService()
 from passlib.hash import sha256_crypt
+import pymysql
 @app.route('/home',methods=['GET'])
 def home():
     return render_template('home.html')
@@ -14,27 +16,8 @@ def home():
 def destinations():
     return render_template('destinations.html')
 
-@app.route('/contact',methods=['GET','POST'])
-def contact():
-    return render_template('contact.html')
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    error = ""
-    form = LoginForm()
-    if form.validate_on_submit():
-        email = form.email.data
-        password = form.password.data
-        if user_authentication.login(email, password):
-            session['user_id'] = user_authentication.get_user_id(email)
-            session['user_name'] = user_authentication.get_user_name(email)
-            return redirect(url_for('profile'))
-        else:
-            error = 'Invalid email or password'
-    return render_template('login.html', form=form, error=error)
-
-
-@app.route('/register',methods=['GET','POST'])
+@app.route('/login/register',methods=['GET','POST'])
 def register():
     error= ""
 
@@ -62,11 +45,17 @@ def register():
     return  render_template('register.html', title = "Register", form= form, message= error)
 
 
-
 @app.route('/terms',methods=['GET'])
 def terms():
     return render_template('terms.html')
 
+@app.route('/profile',methods=['GET'])
+def profile():
+    return render_template('profile.html')
+
+@app.route('/privacy',methods=['GET'])
+def privacy():
+    return render_template('privacy.html')
 
 @app.route('/marketing',methods=['GET','POST'])
 def marketing():
@@ -98,6 +87,63 @@ def marketing():
 
     return  render_template('marketing.html', title = "Marketing", form= form, message= error)
 
+
+data_provider = DataProviderService()
+
+@app.route('/login/', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if request.method == 'POST':
+        email = form.email.data
+        password = form.password.data
+        result, message = data_provider.login(email, password)
+        if result:
+            return redirect(url_for('profile'))
+        else:
+            error = message
+            return render_template('login.html', form=form, error=error)
+    else:
+        return render_template('login.html', form=form)
+
+
+@app.route('/logout')
+def logout():
+    result, message = data_provider.logout()
+    if result:
+        return redirect(url_for('login'))
+    else:
+        error = message
+        return render_template('error.html', error=error)
+
+
+
 @app.route('/quiz',methods=['GET','POST'])
 def quiz():
     return render_template('quiz.html')
+
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    error = " "
+    form = ContactForm()
+    if request.method == 'POST':
+        if form.validate_on_submit():
+            name = form.name.data
+            email = form.email.data
+            subject = form.subject.data
+            message = form.message.data
+
+        if len(name) == 0:
+            error = 'Name cannot be blank!'
+        elif len(email) == 0:
+            error = 'Email cannot be blank! '
+        elif len(message) == 0:
+            error = 'Message cannot be blank! '
+
+
+        else:
+
+            new_message = DATA_PROVIDER.add_query(name,email, subject,message)
+            success = f'Hello {name}! Thank you for contacting us. We aim to respond in 2-5 working days'
+            return render_template('success.html', success_message=success)
+
+    return render_template('contact.html', form=form,error=error)

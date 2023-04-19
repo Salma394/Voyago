@@ -1,6 +1,7 @@
-from wtforms import StringField, SubmitField
+from wtforms import StringField, SubmitField, TextAreaField, SelectField
 from flask_wtf import FlaskForm
 from wtforms import PasswordField
+from wtforms.validators import DataRequired, Email, Length
 
 # inheritance
 # BasicForm inherits from FlaskForm
@@ -27,3 +28,11 @@ class LoginForm(FlaskForm):
 
 class LogOutForm(FlaskForm):
     submit = SubmitField('Log Out')
+
+
+class ContactForm(FlaskForm):
+    name = StringField('Name')
+    email = StringField('Email')
+    subject = SelectField('Subject', choices=[('General Inquiry'), ('Technical Issue'), ('Press Contact')])
+    message = TextAreaField('Message')
+    submit = SubmitField('Submit Query')

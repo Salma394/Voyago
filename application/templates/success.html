@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Marketing</title>
-</head>
-<body>
-<p>{{ success_message }}</p>
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block main_content %}
+    <title>Response</title>
+
+<h3>{{ success_message }}</h3>
+
+
+{% endblock %}

@@ -5,11 +5,13 @@
     <title>{{Title}}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Images/Heart.png">
+    <link rel="icon" href="static/Heart.png">
     <link rel="stylesheet" href="{{url_for('static',filename = 'styles.css')}}"/>
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css')}}"/>
     <!-- navbar -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--    Sign in Icon-->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 <header>
@@ -28,8 +30,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{url_for('home')}}">Home</a></li>
                     <li><a href="{{url_for('destinations')}}">Destinations</a></li>
-                    <li><a href="{{url_for('contact')}}">Contact Us</a></li>
-                    <li><a href="{{url_for('login')}}">Sign In</a></li>
+                    <li><a href="{{url_for('contact')}}">Contact Us</a></li>xs
+                    <li><a href="{{url_for('login')}}"><i class="far fa-user"></i>Sign In</a></li>
                 </ul>
             </div>
         </div>

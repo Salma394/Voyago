@@ -8,31 +8,32 @@
     <link rel="icon" href="Images/Heart.png">
    <link rel="stylesheet" href="{{url_for('static',filename = 'styles.css')}}"/>
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
-   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 
 <header>
 
     <!-- Header -->
-        
-        
-            <div class="topnav" id="home"> 
+
+
+            <div class="topnav" id="home">
                 <nav>
-                    <a href="{{url_for('login')}}">Sign In</a>
+                    <a href="{{url_for('login')}}"><i class="far fa-user"></i>Sign In</a>
                     <a href="{{ url_for('contact')}}">Contact Us</a>
                     <a href="{{ url_for('destinations') }}">Destinations</a>
                     <a href="{{ url_for('home') }}">Home</a>
 
-                    
-                    
-            
-        </nav> 
-        
+
+        </nav>
+
         <div class="title">
             <h1>Voyago</h1>
         </div>
             </div>
+
+
 </header>
 <body>
 
@@ -48,10 +49,12 @@
             <div class= "paragraph1">
 		    <p>Unlock the hidden gems of the world with our expertly curated travel recommendations, and experience unforgettable adventures that exceed your wildest dreams.</p>
             </div>
-            <input type="text" placeholder="Search...">
-        </div>
-    </div>
-   
+       <div class="input-group rounded">
+  <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+  <span class="input-group-text border-0" id="search-addon">
+    <i class="fas fa-search"></i>
+  </span>
+</div>
 
 <!-- Destination categories -->
 <!-- Images with element of interactivity -->
@@ -153,33 +156,34 @@
 
 <!-- Why us? -->
 <br>
-<div section = "why">
 <h2>Why consider our recommendations?</h2>
-<div>
-<h3>Performance</h3>
-<p>One of our core values is providing high quality recommendations from thorough research so you don't have to! </p>
-</div>
-
-<div>
-    <h3>Assurance</h3>
-    <p>We aim to give positive assurance to travelers so they can make educated decisions prior to booking their holidays .</p>
+<div section="why">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4 d-flex justify-content-center align-items-center flex-column">
+        <h3>Performance</h3>
+        <textarea class="form-control" rows="5" style="resize: none; overflow: auto; text-align:center;" placeholder="One of our core values is providing high quality recommendations from thorough research so you don't have to!"></textarea>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center align-items-center flex-column">
+        <h3>Assurance</h3>
+        <textarea class="form-control" rows="5" style="resize: none; overflow: auto; text-align:center;" placeholder="We aim to give positive assurance to travelers so they can make educated decisions prior to booking their holidays"></textarea>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center align-items-center flex-column">
+        <h3>No payments required<i class="fas fa-dollar-sign"></i></h3>
+        <textarea class="form-control" rows="5" style="resize: none; overflow: auto; text-align:center;" placeholder="No free 30 day trials or requests for bank details. Voyago is completely free of charge!"></textarea>
+      </div>
     </div>
-
-<div>
-    <h3>No payments required</h3>
-    <p>No free 30 day trials or requests for bank details. Voyago is completely free of charge!</p>
-        </div>
-
-            </div>
-
+  </div>
 </div>
+
+
  <br>           
 <!-- Subscribe -->
 
 <h2>Your travel journey starts here</h2>
 <p>Sign up for more travel tips and holiday inspirations straight to your inbox</p>
 
-<a class = "subscribe" href="marketing"><button>Click to Subscribe!</button></a>
+<a href="marketing"><button type="subscribe" class="btn btn-primary">Subscribe!</button></a>
 </div>
 
 

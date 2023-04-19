@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block main_content %}
-<div class = "form">
+<div class = "form-container">
         <form method="POST">
 
 
@@ -12,7 +12,7 @@
             <br>
              {{ form.password.label }} {{ form.password }}
             <br>
-            {{ form.register }}
+           <button type="register" class="btn btn-primary">Register</button>
 
     </form>
      </div>

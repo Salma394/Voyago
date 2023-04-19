@@ -1,18 +1,28 @@
 {% extends "layout.html" %}
 {% block main_content %}
-	<title>Contact Us</title>
-	<h1>Contact Us</h1>
-	<p>Got a question or a suggestion? Feel free to reach out to us using the form below.</p>
-	<form action="#" method="post">
-		<label for="name">Name:</label>
-		<input type="text" id="name" name="name" required><br>
+<div class="container">
+  <h1>Contact Us</h1>
+  <form method="post" action="{{ url_for('contact') }}">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+      {{ form.name.label(class="form-control-label") }}
+      {{ form.name(class="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ form.email.label(class="form-control-label") }}
+      {{ form.email(class="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ form.subject.label(class="form-control-label") }}
+      {{ form.subject(class="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ form.message.label(class="form-control-label") }}
+      {{ form.message(class="form-control") }}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
 
-		<label for="email">Email:</label>
-		<input type="email" id="email" name="email" required><br>
 
-		<label for="message">Message:</label><br>
-		<textarea id="message" name="message" rows="5" cols="30" required></textarea><br>
-
-		<input type="submit" value="Submit">
-	</form>
 {% endblock %}
