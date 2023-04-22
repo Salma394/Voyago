@@ -270,3 +270,12 @@ body {
 
 a {
 color: black;
+}
+
+footer {
+  background-color: #f4eee0;
+}
+
+.footer-text {
+  color: black;
+}
