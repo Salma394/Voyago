@@ -27,21 +27,15 @@
 
 
         </nav>
-
+</div>
         <div class="title">
             <h1>Voyago</h1>
         </div>
-            </div>
+   
 
 
 </header>
 <body>
-
-
-<!--    <img id="pic1" style="float: right; margin: 45px 45px 40px 30px; width: 400px; " src="{{url_for('static', filename='Ocean.jpeg')}}"/>-->
-<!--    </div>-->
-
-        <img id= "pic2" class = "firstpic" src="{{url_for('static', filename='Ocean.jpeg')}}"/>
 
         <div class = "tagline">
             <p>The ultimate destination for travel recommendations</p>
@@ -113,48 +107,74 @@
     <p>Experience the best of spring at top destinations, from cherry blossoms in Japan to Caribbean beaches.</p>
 </div>
 
-
 <div class="row2">
-
-
-    <div class = "column2">
-        <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Venice.webp')}}"/>
-        <p class = "country_subheading">Venice, Italy</p>
-            </div>
-
-            <div class = "column2">
-            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Keukenhof-Holland.jpg')}}"/>
-            <p class = "country_subheading">Amsterdam, Netherlands</p>
-                </div>
-                
-                <div class = "column2">
-                <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/mountain_cherry.jpg')}}"/>
-                
-                <p class = "country_subheading">Yoshino, Japan</p>
-                  </div>
-                  
-                  <div class = "column2">
-                   <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Turks and Caicos .jpeg')}}"/>
-               
-                    <p class = "country_subheading">Turks and Caicos</p>
-                  </div>
-
-                  <div class = "column2">
-                       <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/denmark.jpg')}}"/>
-                        <p class = "country_subheading">Copenhagen, Denmark</p>
-                    
-                       </div>
-
-                       <div class = "column2">
-                           <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Algarve.jpeg')}}"/>
-                            <p class = "country_subheading">Algarve, Portugal</p>
+<div class="column2">
+        <div class="container">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-lg-4">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Venice.webp')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Venice, Italy</p>
                     </div>
-                    <div class = "column2">
-                      <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/marrakech.jpg')}}"/>
-                        <p class = "country_subheading">Marrakech, Morroco</p>
-
+                    <div class="col-lg-4">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Keukenhof-Holland.jpg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Amsterdam, Netherlands</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/mountain_cherry.jpg')}}" class="d-block w-100" alt="..."/>
+                            <p class = "country_subheading">Yoshino, Japan</p>
+                        </div>
                 </div>
-                                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                    <div class="col-lg-4">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Turks and Caicos .jpeg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Turks and Caicos</p>
+                    </div>
+                    <div class="col-lg-4">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/denmark.jpg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Copenhagen, Denmark</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Algarve.jpeg')}}" class="d-block w-100" alt="..."/>
+                            <p class = "country_subheading">Algarve, Portugal</p>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/marrakech.jpg')}}" class="d-block w-100" alt="..."/>
+                            <p class = "country_subheading">Marrakech, Morroco</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+    </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </div>
                 
 
 <!-- Why us? -->
