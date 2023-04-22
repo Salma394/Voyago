@@ -66,7 +66,7 @@ CREATE TABLE quarters (
 CREATE TABLE year_quarter_info (
     quarter_id INT NOT NULL,
     city_id INT NOT NULL,
-    average_temperature INT NOT NULL,
+    average_temperature VARCHAR(50) NOT NULL,
     CONSTRAINT fk_quarters FOREIGN KEY (quarter_id) REFERENCES quarters(quarter_id),
     CONSTRAINT fk_location FOREIGN KEY (city_id) REFERENCES location(city_id)
 );
@@ -87,44 +87,3 @@ CREATE TABLE image (
     CONSTRAINT fk_location_i FOREIGN KEY (city_id) REFERENCES location(city_id),
     CONSTRAINT fk_image_category FOREIGN KEY (image_category_id) REFERENCES image_category(image_category_id)
 );
-
-SELECT * FROM location;
-
-SELECT l.city, c.country, ht.type, cl.climate, cu.currency, la.language, r.religion, t.transport, l.description_text, l.activity_description_text, l.traveller_tip_text
-FROM location l
-INNER JOIN country c ON l.country_id = c.country_id
-INNER JOIN climate cl ON l.climate_id = cl.climate_id
-INNER JOIN currency cu ON l.currency_id = cu.currency_id
-INNER JOIN religion r ON l.religion_id = r.religion_id
-INNER JOIN language la ON l.language_id = la.language_id
-INNER JOIN type ht ON l.type_id = ht.type_id
-INNER JOIN transport t ON l.transport_id = t.transport_id
-
-WHERE l.city = 'New York';
-
-SELECT city, image_path, image_alt
-FROM image i
-INNER JOIN location l ON l.city_id = i.city_id;
-
-SELECT i.image_path, i.image_alt
-FROM image AS i
-INNER JOIN location AS l ON l.city_id = i.city_id
-INNER JOIN image_category AS ic ON ic.image_category_id = i.image_category_id
-
-WHERE l.city = 'New York' AND ic.image_category = 'attraction';
-
-SELECT i.image_path, i.image_alt, ic.image_category
-FROM image AS i
-INNER JOIN location AS l ON l.city_id = i.city_id
-INNER JOIN image_category AS ic ON ic.image_category_id = i.image_category_id
-
-WHERE l.city = 'Paris';
-
-SELECT * FROM quarters;
-
-SELECT q.quarter_title, qi.average_temperature
-FROM quarters as q
-INNER JOIN year_quarter_info as qi ON q.quarter_id = qi.quarter_id
-INNER JOIN location as l ON qi.city_id = l.city_id
-
-WHERE l.city = 'Paris';

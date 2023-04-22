@@ -5,53 +5,72 @@
 {% endblock %}
 
 {% block main_content %}
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=Trirong:ital,wght@1,300&display=swap');
 
-    <img src="/static/images/{{ location.images.main[0]['image_path'] }}" alt="{{ location.images.main[0]['image_alt'] }}">
+        h2, h3 {font-family: 'Cormorant Upright', serif;
+        font-family: 'Trirong', serif;}
+        div { font-size: 18px;
+        }
 
-    <div class="overview">
+        strong {
+        font-weight: 600;
+        font-size: 18px;
+        }
+
+        div, p { font-size: 18px;
+        font-weight: 300;
+        }
+    </style>
+    <img style="display: block; margin: 0 auto; width: auto; height: 800px; border-radius: 20px;" src="/static/images/{{ location.images.main[0]['image_path'] }}" alt="{{ location.images.main[0]['image_alt'] }}">
+
+    <div class="overview" style="padding-left: 200px; padding-right: 200px; padding-top: 70px">
         <h2>Overview</h2>
-        <ul>
-            <li>Climate: {{ location.climate }}</li>
-
+        <ul style="list-style: none;">
+            <li><strong>Climate</strong>: {{ location.climate }}</li>
+            <br>
             {% for quarter in location.temperatures %}
-
-            <li>{{ quarter.quarter_title }}: {{ quarter.average_temperature }}&deg;C</li>
-
+            <li><strong>{{ quarter.quarter_title }}</strong>: {{ quarter.average_temperature }}</li>
             {% endfor %}
-
-
-            <li>Currency: {{ location.currency }}</li>
-            <li>Languages: {{ location.language }}</li>
+            <br>
+            <li><strong>Currency</strong>: {{ location.currency }}</li>
+            <li><strong>Languages Spoken</strong>: {{ location.language }}</li>
+        </ul>
+    </div>
+<br>
+    <div class="further_info" style="padding-left: 200px; padding-right: 200px; padding-bottom: 70px;">
+        <h3>Further Information</h3>
+        <ul style="list-style: none;">
+            <li><strong>Predominant Religion</strong>: {{ location.religion }}</li>
+            <li><strong>Recommended mode of Transport</strong>: {{ location.transport }}</li>
         </ul>
     </div>
 
-    <div class="further_info">
-        <h2>Further Information</h2>
-        <ul>
-            <li>Religion: {{ location.religion }}</li>
-            <li>Transport: {{ location.transport }}</li>
-        </ul>
-    </div>
-
-    <p>About {{ location.city }}</p>
+<div style="padding-left: 200px; padding-right: 200px; padding-bottom: 70px;">
+    <h2>About {{ location.city }}</h2>
     <p>{{ location.description_text }}</p>
+</div>
 
-    <p>What to do in {{ location.city }}</p>
-    <p>{{ location.activity_description_text }}</p>
-
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px;">
     {% for attraction_image_data in location.images.attraction %}
-        <img src="/static/images/{{ attraction_image_data['image_path'] }}" alt="{{ attraction_image_data['image_alt'] }}">
+        <img style="height: 400px; max-width: 100%; margin: 20 auto; border-radius: 10px;" src="/static/images/{{ attraction_image_data['image_path'] }}" alt="{{ attraction_image_data['image_alt'] }}">
     {% endfor %}
+</div>
 
-    <p>Where to stay in {{ location.city }}</p>
+<div style="padding-left: 200px; padding-right: 200px; padding-bottom: 70px; padding-top: 70px">
+    <h2>What to do in {{ location.city }}</h2>
+    <p>{{ location.activity_description_text }}</p>
+<br>
+    <h2>Travellers' Tips</h2>
+    <p>{{ location.traveller_tip_text }}</p>
+<br>
+    <h2>Where to stay in {{ location.city }}</h2>
+</div>
 
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px;">
     {% for accommodation_image_data in location.images.accommodation %}
-        <img src="/static/images/{{ accommodation_image_data['image_path'] }}" alt="{{ accommodation_image_data['image_alt'] }}">
+        <img style="width: auto; height: 250px; border-radius: 20px;" src="/static/images/{{ accommodation_image_data['image_path'] }}" alt="{{ accommodation_image_data['image_alt'] }}">
     {% endfor %}
-
-    {% if location.traveller_tip_text %}
-        <p>Travellers' Tips</p>
-        <p>{{ location.traveller_tip_text }}</p>
-    {% endif %}
+</div>
 
 {% endblock %}

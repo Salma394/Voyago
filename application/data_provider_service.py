@@ -1,7 +1,7 @@
 import pymysql
-from flask import session
 from passlib.hash import sha256_crypt
 from flask import session
+
 class DataProviderService:
     def __init__(self):
         """
@@ -10,7 +10,7 @@ class DataProviderService:
         host = 'localhost'
         port = 3306
         user = 'root'
-        password = ''
+        password = 'password'
         database = 'Voyago'
         self.conn = pymysql.connect(host=host, port=port, user=user, password=password, db=database)
         self.cursor = self.conn.cursor()

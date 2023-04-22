@@ -7,7 +7,7 @@ class LocationDbModel:
             host='localhost',
             port=3306,
             user='root',
-            password='',
+            password='password',
             database='voyago',
             cursorclass=pymysql.cursors.DictCursor
         )
