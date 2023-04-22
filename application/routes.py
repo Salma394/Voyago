@@ -26,7 +26,6 @@ def home():
 def destinations():
     return render_template('destinations.html')
 
-
 @app.route('/about')
 def about():
     return render_template('about.html', title='About')
