@@ -4,6 +4,12 @@
     background-color:#FFFFFF;
 }
 
+.navbar-brand {
+  font-size: 5rem;
+  color: #7a7a7a;
+  font-family: 'Poppins', sans-serif;
+}
+
 
 h1{
     font-size: 70px;
@@ -15,7 +21,6 @@ h1{
 .topnav {
     background-color:c0c0c0;
     overflow: hidden;
-    color: black;
   }
 
   /* Style the links inside the navigation bar */
@@ -270,3 +275,13 @@ body {
 
 a {
 color: black;
+}
+
+footer {
+  background-color: #f4eee0;
+}
+
+.footer-text {
+  color: black;
+}
+
