@@ -16,9 +16,9 @@
 <header>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid justify-content-between">
-    <a class="navbar-brand" href="#">Voyago</a>
-    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="container-fluid justify-content-right">
+    <a class="navbar-brand" href="{{ url_for('home') }}">Voyago</a>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="z-index: 9999;">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -40,8 +40,6 @@
   </div>
 </nav>
 
-
-
 </header>
 <body>
 <div class = "container">
@@ -49,7 +47,7 @@
   <img src="{{url_for('static', filename='images/city_view.jpg')}}"/>
   <div class="banner-text">
       <h4>The ultimate destination for travel recommendations</h4>
-          <h5>Unlock the hidden gems of the world with our expertly curated travel recommendations, and experience unforgettable adventures that exceed your wildest dreams.</h5>
+      <a href="{{ url_for('quiz') }}" class="btn btn-outline-light btn-sm">Get Started</a>
   </div>
 </div>
 </div>
@@ -185,33 +183,6 @@
     </div>
        </div>
 
-<!-- Why us? -->
-<br>
-<div class="container">
-  <h2 class="text-center my-5">Why consider our recommendations?</h2>
-  <div section="why">
-    <div class="row justify-content-center">
-      <div class="col-md-4">
-        <div class="text-center">
-          <h5 class="font-weight-bold mb-4">Performance</h5>
-          <p class="mb-0">One of our core values is providing high quality recommendations from thorough research so you don't have to!</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="text-center">
-          <h5 class="font-weight-bold mb-4">Assurance</h5>
-          <p class="mb-0">We aim to give positive assurance to travelers so they can make educated decisions prior to booking their holidays</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="text-center">
-          <h5 class="font-weight-bold mb-4">No payments required<i class="fas fa-dollar-sign"></i></h5>
-          <p class="mb-0">No free 30 day trials or requests for bank details. Voyago is completely free of charge!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
@@ -221,15 +192,43 @@
   <h2>Your travel journey starts here</h2>
   <p class="lead">Sign up for more travel tips and holiday inspirations straight to your inbox</p>
 
-  <form class="row justify-content-center">
+  <form class="row justify-content-center" id="subscribe-form">
     <div class="col-md-4">
-      <input type="email" class="form-control" placeholder="Email Address">
+      <input type="email" class="form-control" placeholder="Email Address" id="email-input">
     </div>
     <div class="col-md-2">
-      <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
+      <button type="submit" class="btn btn-primary btn-block" id="subscribe-btn">Subscribe</button>
     </div>
   </form>
+
+  <div class="subscribe-message mt-3 d-none" id="subscribe-message">
+    <p class="lead">Thank you for subscribing to Voyago!</p>
+  </div>
 </div>
+
+<script>
+  const form = document.getElementById('subscribe-form');
+  const emailInput = document.getElementById('email-input');
+  const subscribeBtn = document.getElementById('subscribe-btn');
+  const subscribeMessage = document.getElementById('subscribe-message');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = emailInput.value;
+
+    setTimeout(function() {
+      subscribeBtn.textContent = 'Subscribed';
+      subscribeBtn.disabled = true;
+      subscribeBtn.classList.remove('btn-primary');
+      subscribeBtn.classList.add('btn-success');
+      subscribeMessage.classList.remove('d-none');
+    }, 1000);
+  });
+</script>
+
+
+
+
 
 <!-- Footer -->
 

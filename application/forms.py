@@ -8,8 +8,6 @@ from wtforms.validators import DataRequired, Email, Length
 # BasicForm is now a kind of FlaskForm
 class BasicForm(FlaskForm):
     # Instantiating different input fields
-    first_name = StringField('First Name')
-    last_name = StringField('Last Name')
     email = StringField('Email')
     subscribe = SubmitField('Subscribe!')
 

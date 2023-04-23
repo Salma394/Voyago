@@ -20,7 +20,7 @@
 <body>
 <header>
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid justify-content-between">
+  <div class="container-fluid justify-content-right">
     <a class="navbar-brand" href="{{ url_for('home') }}">Voyago</a>
     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -48,33 +48,39 @@
 
 {% block main_content %}{% endblock %}
 
-
-
+<div class= "container">
 <footer>
-  <nav class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#footer-nav" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse" id="footer-nav">
-
-          <a href="#about" class="active">About</a>
-         <a href="terms.html">Terms and Conditions</a>
-          <a href="privacy.html">Privacy Policy</a>
-         <a href="sitemap">Sitemap</a>
-        <a href="#FAQ">FAQ</a>
-
-        <p class="navbar-text navbar-right">&copy; 2023 Voyago Ltd @ Sky Get into Tech, All rights reserved.</p>
-      </div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#footer-nav" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
     </div>
-  </nav>
-</footer>
+    <div class="collapse navbar-collapse" id="footer-nav">
+      <ul class="nav navbar-nav" style="display: flex; justify-content: center;">
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('terms') }}">Terms and Conditions</a></li>
+        <li><a href="{{ url_for('privacy') }}">Privacy Policy</a></li>
+        <li><a href="{{ url_for('site') }}">Sitemap</a></li>
+        <li><a href="{{ url_for('FAQ') }}">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
+
+
+  <div class = "fineprint">
+        <h6>Sky Campus,Grant Way, Isleworth, TW5 5QD</h6>
+        <H6>&copy; 2023 Voyago Ltd @ Sky Get into Tech, All rights reserved.</H6>
+      </div>
+
+</footer>
+</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -30,6 +30,14 @@ def destinations():
 def about():
     return render_template('about.html', title='About')
 
+@app.route('/site')
+def site():
+    return render_template('site.html', title='site')
+
+@app.route('/FAQ')
+def FAQ():
+    return render_template('faq.html', title='faq')
+
 
 @app.route('/location/<city>')
 def location(city):
