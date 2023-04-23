@@ -192,16 +192,16 @@ $('#submit-btn').click(function () {
 		// document.getElementById('intro-bar').style.width = ((total / 60) * 100) + '%';
 		// console.log(document.getElementById('intro-bar').style.width);
 		// document.getElementById('intro-bar').innerHTML= ((total / 60) * 100) + '%';
-		document.getElementById('results').innerHTML = '<b>Your ideal holiday destination is Cairns, Australia!</b><br><br>\
-		Cairns is a popular tourist destination located in the tropical north of Queensland, known for its proximity to the Great Barrier Reef and the Daintree Rainforest,.\n\
+		document.getElementById('results').innerHTML = '<b>Your ideal holiday destination is Vancouver, Canada!</b><br><br>\
+		Vancouver is a coastal seaport city in western Canada, Known for its beautiful natural surroundings, mild climate, and cosmopolitan atmosphere, Vancouver is a popular destination for tourists from all over the world.\n\
 <br><br>\
-Cairns offers a variety of activities for visitors, including snorkeling or scuba diving on the Great Barrier Reef, exploring the Daintree Rainforest.\
+Vancouver is a sports loving city and there a variety of athletic activities for visitors to enjoy, including skiing, snowboarding, hiking and cycling.\
         ';
 	} else if(total< 20 && total > 10) {
-		document.getElementById('results').innerHTML = '<b>Your ideal holiday destination is Cape Town, South Africa!</b><br><br>\
-		Cape Town is a coastal city in South Africa known for its natural beauty, diverse culture, and historical landmarks such as Table Mountain and Robben Island.\n\
+		document.getElementById('results').innerHTML = '<b>Your ideal holiday destination is Cairo, Egypt!</b><br><br>\
+		Cairo is the capital city of Egypt, located on the banks of the Nile River, Cairo has a rich history and is home to many important landmarks and attractions.\n\
 <br><br>\
-Cape Town offers a range of adventure activities, including shark cage diving, surfing, hiking Table Mountain, paragliding, and exploring the nearby Cape Peninsula.\
+Cairo offers a range of exciting activities, including visiting the pyramids of Giza, exploring the artefacts at the Egyptian museum, wondering around old Cairo and taking a cruise up the Nile river.\
 ';
 	} else if(total< 10 && total > 0) {
 		document.getElementById('results').innerHTML = '<b>Your ideal holiday destination is Tokyo, Japan!</b><br><br>\
@@ -210,10 +210,10 @@ Cape Town offers a range of adventure activities, including shark cage diving, s
 Tokyo is a bustling metropolis known for its cutting-edge technology, vibrant street fashion, delicious food, and unique blend of traditional and modern culture.\
 ';
 	} else {
-		document.getElementById('results').innerHTML = '<b>Your ideal Holiday destination is Cancun, Mexico!</b><br><br>\
-		Cancun is a popular beach resort city located on the northeast coast of the Yucatan Peninsula in Mexico.\n\
+		document.getElementById('results').innerHTML = '<b>Your ideal Holiday destination is Sicily, Italy!</b><br><br>\
+		Sicily is the largest island in the Mediterranean Sea and is known for its rich history, beautiful beaches, delicious food, and stunning natural landscapes.\n\
 <br><br>\
-Cancun is known for its white sand beaches, turquoise waters and vibrant night life.'
+Sicilian beaches are some of the most picturesque in the world with crystal-clear waters and soft, sandy shores. Whether you are looking for a secluded cove or a lively beach scene, there is something for everyone.'
 	}
 
 	// Hide the quiz after they submit their results
