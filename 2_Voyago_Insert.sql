@@ -1,10 +1,10 @@
-INSERT INTO country (country) VALUES ('Japan'), ('Italy'), ('Canada');
-INSERT INTO language (language) VALUES ('Japanese'), ('Italian'), ('English');
+INSERT INTO country (country) VALUES ('Japan'), ('Italy'), ('Canada'), ('Egypt');
+INSERT INTO language (language) VALUES ('Japanese'), ('Italian'), ('English'), ('Arabic');
 INSERT INTO type (type) VALUES ('City'), ('Beach'), ('Adventure'), ('Historic');
 INSERT INTO transport (transport) VALUES ('Train'), ('Car'), ('Bike');
-INSERT INTO currency (currency) VALUES ('Japanese Yen (JPY)'), ('Euro (EUR)'), ('Canadian Dollar (CAD)');
-INSERT INTO climate (climate) VALUES ('Tropical'), ('Mediterranean'), ('Oceanic ');
-INSERT INTO religion (religion) VALUES ('Shintoism'), ('Christianity');
+INSERT INTO currency (currency) VALUES ('Japanese Yen (JPY)'), ('Euro (EUR)'), ('Canadian Dollar (CAD)'), ('Egyptian Pound (EGP)');
+INSERT INTO climate (climate) VALUES ('Tropical'), ('Mediterranean'), ('Oceanic '), ('Desert');
+INSERT INTO religion (religion) VALUES ('Shintoism'), ('Christianity'), ('Islam');
 INSERT INTO image_category (image_category) VALUES ('Main'), ('Attraction'), ('Accommodation');
 INSERT INTO quarters (quarter_title) VALUES ('January to March'), ('April to June'), ('July to September'), ('October to December');
 
@@ -28,22 +28,15 @@ Food lovers will delight in the local cuisine, which includes fresh seafood, ara
 "When travelling to Italy, be aware of the local customs and dress appropriately when visiting religious sites. Carry cash as some shops and restaurants may not accept cards. Tipping isn't expected, but rounding up the bill or leaving a small amount for exceptional service is appreciated."),
 ('Vancouver', 3, 3, 3, 3, 3, 3, 2,
 "Vancouver is a beautiful place located in the westernmost part of Canada, surrounded by stunning natural beauty. The city is known for its outdoor adventure activities, and it's a haven for hikers and adventure seekers. With its mild climate, towering mountains, and pristine forests, Vancouver offers some of the best hiking trails in North America.
-
-Visitors can explore the famous Grouse Grind, a challenging hiking trail up the face of Grouse Mountain, or wander through the lush forests of Stanley Park, the largest urban park in Canada. For those seeking a more challenging hike, the Stawamus Chief in Squamish offers stunning views of the surrounding mountains and ocean. Other popular hiking trails include the Lions, Black Tusk, and the Howe Sound Crest Trail.
-
-Beyond hiking, visitors can enjoy a wide range of outdoor activities, including kayaking, mountain biking, skiing, and snowboarding. Vancouver is also home to a thriving food scene, with diverse culinary options that reflect the city's multicultural population.
-
 With its incredible natural beauty, world-class hiking trails, and endless outdoor activities, Vancouver is a must-visit destination for any adventure seeker.",
-"Vancouver is a city that offers something for everyone, especially for sports enthusiasts. With its stunning natural scenery and endless outdoor activities, it's a perfect destination for those looking to get active and explore the great outdoors.
-
-For winter sports lovers, Vancouver boasts some of the best skiing and snowboarding opportunities in North America. Grouse Mountain, Cypress Mountain, and Mount Seymour all offer world-class skiing and snowboarding slopes, with breathtaking views of the surrounding mountains and ocean.
-
+"For winter sports lovers, Vancouver boasts some of the best skiing and snowboarding opportunities in North America. Grouse Mountain, Cypress Mountain, and Mount Seymour all offer world-class skiing and snowboarding slopes, with breathtaking views of the surrounding mountains and ocean.
 During the summer months, visitors can enjoy a wide range of outdoor activities, including kayaking, stand-up paddleboarding, and mountain biking. Stanley Park, the city's largest urban park, offers endless opportunities for outdoor activities, with beautiful trails for walking, running, and biking.
-
-Sports enthusiasts can also catch a game at one of Vancouver's many sports stadiums, including BC Place Stadium, Rogers Arena, and Nat Bailey Stadium. Vancouver is home to several sports teams, including the Vancouver Canucks hockey team and the Vancouver Whitecaps soccer team.
-
-With its beautiful scenery, endless outdoor activities, and exciting sports scene, Vancouver is a top destination for sports enthusiasts looking to get active and explore the great outdoors.",
-"Remember to bring appropriate outdoor gear for the season and be prepared for all weather conditions. Also, don't forget to try the city's famous sushi and craft beer!");
+Sports enthusiasts can also catch a game at one of Vancouver's many sports stadiums, including BC Place Stadium, Rogers Arena, and Nat Bailey Stadium. Vancouver is home to several sports teams, including the Vancouver Canucks hockey team and the Vancouver Whitecaps soccer team.",
+"Remember to bring appropriate outdoor gear for the season and be prepared for all weather conditions. Also, don't forget to try the city's famous sushi and craft beer!"),
+('Cairo', 4, 4, 4, 1, 4, 4, 3,
+"Cairo is the capital and largest city of Egypt, located on the banks of the Nile River in the north of the country. With a rich history dating back to ancient times, Cairo is a bustling metropolis that offers a fascinating mix of traditional Islamic culture and modern urban life.",
+"Cairo offers a wealth of activities and attractions for visitors. The Great Pyramid of Giza is a must-see attraction, as are the Sphinx and the Egyptian Museum. Islamic Cairo offers numerous historical mosques, including the Al-Azhar Mosque and the Sultan Hassan Mosque. The Khan El-Khalili market is a bustling bazaar that offers a glimpse into local life, while the Nile River provides a peaceful escape from the city's hustle and bustle. Finally, sampling Egyptian cuisine, such as koshary and ful medames, is a must-do activity while in Cairo.",
+"When travelling in Cairo, it is important to dress conservatively, particularly for women. Negotiate prices before purchasing goods or services and be aware of pickpockets in crowded areas. Taxis are a good option for getting around, but ensure that the meter is used or negotiate the fare beforehand. Finally, drink only bottled water and be aware of the potential for scams aimed at tourists.");
 
 INSERT INTO year_quarter_info (city_id, quarter_id, average_temperature) VALUES
 (1, 1,  '9-12°C (48-54°F)'),
@@ -57,7 +50,11 @@ INSERT INTO year_quarter_info (city_id, quarter_id, average_temperature) VALUES
 (3, 1, '2-9°C (36-48°F)'),
 (3, 2, '12-18°C (54-64°F)'),
 (3, 3, '17-23°C (63-73°F)'),
-(3, 4, '6-10°C (43-50°F)');
+(3, 4, '6-10°C (43-50°F)'),
+(4, 4, '8-24°C (46-75°F)'),
+(4, 4, '16-35°C (61-95°F)'),
+(4, 4, '22-40°C (72-104°F)'),
+(4, 4, '11-30°C (52-86°F)');
 
 INSERT INTO image (city_id, image_category_id, image_path, image_alt) VALUES
 (1, 1, 'tokyo-main.jpg', 'Tokyo'),
@@ -75,4 +72,21 @@ INSERT INTO image (city_id, image_category_id, image_path, image_alt) VALUES
 (2, 3, 'sicily-hotel.jpg', 'Hotel'),
 (2, 3, 'sicily-hotel2.jpg', 'Hotel'),
 (2, 3, 'sicily-hotel3.jpg', 'Hotel'),
-(2, 3, 'sicily-hotel4.jpg', 'Hotel');
+(2, 3, 'sicily-hotel4.jpg', 'Hotel'),
+(3, 1, 'vancouver.jpg', 'Vancouver'),
+(3, 2, 'vancouver2.jpg', 'Vancouver'),
+(3, 2, 'vancouver3.jpg', 'Vancouver'),
+(3, 2, 'vancouver4.jpg', 'Vancouver'),
+(3, 2, 'vancouver5.jpg', 'Vancouver'),
+(3, 3, 'vancouver6.jpg', 'Vancouver'),
+(3, 3, 'vancouver7.jpg', 'Vancouver'),
+(3, 3, 'vancouver8.jpg', 'Vancouver'),
+(3, 3, 'vancouver9.jpg', 'Vancouver'),
+(4, 1, 'cairo.jpg', 'Cairo'),
+(4, 2, 'cairo2.jpg', 'Cairo'),
+(4, 2, 'cairo3.jpg', 'Cairo'),
+(4, 2, 'cairo4.jpg', 'Cairo'),
+(4, 3, 'cairo5.jpg', 'Cairo'),
+(4, 3, 'cairo6.jpg', 'Cairo'),
+(4, 3, 'cairo7.jpg', 'Cairo'),
+(4, 3, 'cairo8.jpg', 'Cairo');
