@@ -1,28 +1,72 @@
 {% extends "layout.html" %}
+
 {% block main_content %}
 <div class="container">
-  <h2>Contact Us</h2>
-  <form method="post" action="{{ url_for('contact') }}">
-    {{ form.hidden_tag() }}
-    <div class="form-group">
-      {{ form.name.label(class="form-control-label") }}
-      {{ form.name(class="form-control") }}
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Contact Us</h2>
+      <p>We're here to help! Please fill out the form below and we'll get back to you as soon as we can.</p>
+      <form method="post" action="{{ url_for('contact') }}">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+          {{ form.name.label(class="form-control-label") }}
+          {{ form.name(class="form-control") }}
+        </div>
+        <div class="form-group">
+          {{ form.email.label(class="form-control-label") }}
+          {{ form.email(class="form-control") }}
+        </div>
+        <div class="form-group">
+          {{ form.subject.label(class="form-control-label") }}
+          {{ form.subject(class="form-control") }}
+        </div>
+        <div class="form-group">
+          {{ form.message.label(class="form-control-label") }}
+          {{ form.message(class="form-control") }}
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
-    <div class="form-group">
-      {{ form.email.label(class="form-control-label") }}
-      {{ form.email(class="form-control") }}
+
+    <div class="col-md-6">
+      <img src="{{url_for('static', filename='images/dark_city_sunset.jpg')}}" class="img-fluid" alt="Contact Us">
     </div>
-    <div class="form-group">
-      {{ form.subject.label(class="form-control-label") }}
-      {{ form.subject(class="form-control") }}
-    </div>
-    <div class="form-group">
-      {{ form.message.label(class="form-control-label") }}
-      {{ form.message(class="form-control") }}
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+  </div>
 </div>
 
+<style>
+.image-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.col-md-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0062cc;
+  border-color: #0062cc;
+}
+
+.btn-link {
+  color: #007bff;
+}
+
+</style>
 {% endblock %}

@@ -46,7 +46,7 @@
 <body>
 
 <div class="banner">
-  <img src="{{url_for('static', filename='images/city_view.jpg')}}" alt="Image 3"/>
+  <img src="{{url_for('static', filename='images/city_view.jpg')}}"/>
   <div class="banner-text">
       <h4>The ultimate destination for travel recommendations</h4>
   </div>
@@ -59,7 +59,7 @@
 <!-- Destination categories -->
 <!-- Images with element of interactivity -->
 <div class="container">
-<section id="Destinations" class = "pt-md-5"#>
+<section id="Destinations" class = "pt-md-5">
 
         <h2>Holiday Destinations</h2>
 
@@ -71,22 +71,22 @@
 <div class="container">
   <div class="row no-gutters">
     <div class="col-md-3 text-center">
-      <img style="width: auto; height: 200px; border-radius: 20px;" src="{{url_for('static', filename='images/beachpic.jpg')}}"/>
+      <img style="width: auto; height: 200px; border-radius: 20px; margin-bottom: 10px;" src="{{url_for('static', filename='images/beachpic.jpg')}}"/>
       <h5 class="country_subheading2">Beach</h5>
       <p>Sandy shores and endless waves - let the sea set you free!</p>
     </div>
     <div class="col-md-3 text-center">
-      <img style="width: auto; height: 200px; border-radius: 20px;" src="{{url_for('static', filename='images/budapest.jpg')}}"/>
+      <img style="width: auto; height: 200px; border-radius: 20px; margin-bottom: 10px;" src="{{url_for('static', filename='images/budapest.jpg')}}"/>
       <h5 class="country_subheading2">City Break</h5>
       <p>Explore urban wonders where every street is a new adventure.</p>
     </div>
     <div class="col-md-3 text-center">
-      <img style="width: auto; height: 200px; border-radius: 20px;" src="{{url_for('static', filename='images/adventure.jpg')}}"/>
+      <img style="width: auto; height: 200px; border-radius: 20px; margin-bottom: 10px;" src="{{url_for('static', filename='images/adventure.jpg')}}"/>
       <h5 class="country_subheading2">Adventure</h5>
       <p>Push your limits and discover the thrill of the unknown.</p>
     </div>
     <div class="col-md-3 text-center">
-      <img style="width: auto; height: 200px; border-radius: 20px;" src="{{url_for('static', filename='images/activity.jpg')}}"/>
+      <img style="width: auto; height: 200px; border-radius: 20px; margin-bottom: 10px;" src="{{url_for('static', filename='images/activity.jpg')}}"/>
       <h5 class="country_subheading2">Activity</h5>
       <p>From heart-pumping sports to laid-back hobbies, find your passion and let it guide you.</p>
     </div>
@@ -121,15 +121,15 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 text-center">
                             <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Venice.webp')}}" class="d-block w-100" alt="..."/>
                         <p class = "country_subheading">Venice, Italy</p>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 text-center">
                             <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Keukenhof-Holland.jpg')}}" class="d-block w-100" alt="..."/>
-                        <p class = "country_subheading">Amsterdam, Netherlands</p>
+                        <p class = "country_subheading">Amsterdam, The Netherlands</p>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 text-center">
                             <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/mountain_cherry.jpg')}}" class="d-block w-100" alt="..."/>
                             <p class = "country_subheading">Yoshino, Japan</p>
                         </div>
@@ -137,15 +137,15 @@
               </div>
               <div class="carousel-item">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 text-center">
                             <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Turks and Caicos .jpeg')}}" class="d-block w-100" alt="..."/>
                         <p class = "country_subheading">Turks and Caicos</p>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 text-center">
                             <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/denmark.jpg')}}" class="d-block w-100" alt="..."/>
                         <p class = "country_subheading">Copenhagen, Denmark</p>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 text-center">
                             <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Algarve.jpeg')}}" class="d-block w-100" alt="..."/>
                             <p class = "country_subheading">Algarve, Portugal</p>
 
@@ -155,7 +155,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 text-center">
                             <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/marrakech.jpg')}}" class="d-block w-100" alt="..."/>
                             <p class = "country_subheading">Marrakech, Morroco</p>
                         </div>
@@ -191,21 +191,21 @@
   <div section="why">
     <div class="row justify-content-center">
       <div class="col-md-4">
-        <div class="form-group">
-          <label for="performance">Performance</label>
-          <textarea class="form-control" id="performance" rows="5" style="resize: none; overflow: auto; text-align:center;" placeholder="One of our core values is providing high quality recommendations from thorough research so you don't have to!"></textarea>
+        <div class="text-center">
+          <h5 class="font-weight-bold mb-4">Performance</h5>
+          <p class="mb-0">One of our core values is providing high quality recommendations from thorough research so you don't have to!</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="form-group">
-          <label for="assurance">Assurance</label>
-          <textarea class="form-control" id="assurance" rows="5" style="resize: none; overflow: auto; text-align:center;" placeholder="We aim to give positive assurance to travelers so they can make educated decisions prior to booking their holidays"></textarea>
+        <div class="text-center">
+          <h5 class="font-weight-bold mb-4">Assurance</h5>
+          <p class="mb-0">We aim to give positive assurance to travelers so they can make educated decisions prior to booking their holidays</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="form-group">
-          <label for="payments">No payments required<i class="fas fa-dollar-sign"></i></label>
-          <textarea class="form-control" id="payments" rows="5" style="resize: none; overflow: auto; text-align:center;" placeholder="No free 30 day trials or requests for bank details. Voyago is completely free of charge!"></textarea>
+        <div class="text-center">
+          <h5 class="font-weight-bold mb-4">No payments required<i class="fas fa-dollar-sign"></i></h5>
+          <p class="mb-0">No free 30 day trials or requests for bank details. Voyago is completely free of charge!</p>
         </div>
       </div>
     </div>
@@ -216,12 +216,18 @@
 
  <br>           
 <!-- Subscribe -->
-<div class="container">
-<h2>Your travel journey starts here</h2>
-<p>Sign up for more travel tips and holiday inspirations straight to your inbox</p>
+<div class="container text-center py-5">
+  <h2>Your travel journey starts here</h2>
+  <p class="lead">Sign up for more travel tips and holiday inspirations straight to your inbox</p>
 
-<a href="marketing"><button type="subscribe" class="btn btn-primary">Subscribe!</button></a>
-</div>
+  <form class="row justify-content-center">
+    <div class="col-md-4">
+      <input type="email" class="form-control" placeholder="Email Address">
+    </div>
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
+    </div>
+  </form>
 </div>
 
 <!-- Footer -->

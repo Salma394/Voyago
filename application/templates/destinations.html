@@ -1,10 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcomet to...</title>
-</head>
-<body>
+{% extends "layout.html" %}
+{% block main_content %}
 
-</body>
-</html>
+
+    <div class="container">
+    <div class="navbar">
+        <img src="{{url_for('static', filename='images/safari.jpg')}}" class="logo">
+    <nav>
+        <ul>
+            <li><a href="">HOME</a></li>
+             <li><a href="">REGION</a></li>
+             <li><a href="">ABOUT</a></li>
+        </ul>
+    </nav>
+        <img src="{{url_for('static', filename='images/ocean_boat.jpg')}}" class="menu-icon">
+    </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h1>Sahara</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores assumenda beatae delectus dignissimos dolorum harum illo impedit laudantium, libero odio optio placeat praesentium quod similique suscipit unde, veniam, vero?</p>
+            <button type="button">Explore</button>
+        </div>
+        <div class="col">
+            <div class="card card1">
+                <h5>Western Desert</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+             <div class="card" card2>
+                <h5>AI Bagawat</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+             <div class="card" card3>
+                <h5>Pyramid of Giza</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+             <div class="card card4">
+                <h5>Kalahari Desert</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -69,18 +69,23 @@ h1{
   text-align: left;
   color: white;
   font-size: 2em;
+  background-color: transparent;
 }
 
 .banner-text h1 {
   font-weight: bold;
   font-size: 2em;
   margin: 0;
+  background-color: transparent;
 }
 
 .banner-text p {
   font-size: 1.5em;
   margin-top: 20px;
+  background-color: transparent;
 }
+
+
 
 
   h2{
@@ -110,17 +115,6 @@ h1{
     line-height: 1.28;
     letter-spacing: -0.5px;
     text-align: left;
-  }
-
-.firstpic{
-      border-radius: 60px
-      width: auto;
-      height:400px;
-      position: relative;
-      left:50%;
-      top:10px
-
-
   }
 
 
@@ -284,4 +278,24 @@ footer {
 .footer-text {
   color: black;
 }
+
+
+.col-md-3 {
+position: relative;
+overflow: hidden;
+    }
+
+.col-md-3 img {
+transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    }
+
+.col-md-3:hover img {
+transform: scale(1.1); /* adjust the scale factor to your liking */
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* adjust the box-shadow to your liking */
+    }
+
+.col-md-3 h5,
+.col-md-3 p {
+text-align: center;
+    }
 
