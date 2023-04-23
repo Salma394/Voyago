@@ -58,8 +58,10 @@ h1{
   height: 100%;
   width: 100%;
   object-fit: cover;
-  opacity: 0.7; /* modified opacity */
+  opacity: 0.7; /* modified opacity 0.7 */
 }
+
+
 
 .banner-text {
   position: absolute;
@@ -72,17 +74,20 @@ h1{
   background-color: transparent;
 }
 
-.banner-text h1 {
+.banner-text h4 {
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 0;
-  background-color: transparent;
+    background-color: transparent;
+     color: whitesmoke;
 }
 
-.banner-text p {
-  font-size: 1.5em;
+.banner-text h5 {
+  font-size: 1.0em;
   margin-top: 20px;
   background-color: transparent;
+  color: white;
+  text-align: left;
 }
 
 
