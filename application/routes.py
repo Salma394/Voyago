@@ -144,7 +144,7 @@ def login():
         if result:
             return redirect(url_for('profile'))
         else:
-            error = message
+            error = "Incorrect Email or Password. Please try Again!"
             return render_template('login.html', form=form, error=error)
     else:
         return render_template('login.html', form=form)
