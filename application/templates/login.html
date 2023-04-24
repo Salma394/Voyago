@@ -1,45 +1,45 @@
 {% extends "layout.html" %}
 
 {% block main_content %}
-<div class="image-container"></div>
 
-<div class="container ">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-body">
-          <form method="POST">
+<div class = "container">
+  <div class="banner">
+    <img src="{{url_for('static', filename='images/ocean_boat.jpg')}}"/>
+  </div>
+</div>
+<br>
 
-            <div class="form-group">
-              {{ form.email.label }}
-              {{ form.email(class="form-control", placeholder="Email") }}
-            </div>
+<div class="container d-flex justify-content-center">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <form method="POST">
 
-            <div class="form-group">
-              {{ form.password.label }}
-              {{ form.password(class="form-control", placeholder="Password") }}
-            </div>
+          <div class="form-group">
+            {{ form.email.label }}
+            {{ form.email(class="form-control", placeholder="Email") }}
+          </div>
 
-            <button type="submit" class="btn btn-primary">Sign In</button>
+          <div class="form-group">
+            {{ form.password.label }}
+            {{ form.password(class="form-control", placeholder="Password") }}
+          </div>
 
-            <a href="register" class="btn btn-primary">Register</a>
+          <button type="submit" class="btn btn-primary">Sign In</button>
 
-          </form>
-        </div>
+          <a href="register" class="btn btn-primary">Register</a>
+
+        </form>
       </div>
-      <br>
-      <div class="d-flex justify-content-center">
+    </div>
+    <br>
+    <div class="d-flex justify-content-center">
         <a href="#" class="btn btn-google btn-circle mr-2">
           <i class="fab fa-google"></i>
         </a>
         <a href="#" class="btn btn-apple btn-circle">
           <i class="fab fa-apple"></i>
-        </a>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-<!--      <img src="{{url_for('static', filename='images/ocean_boat.jpg')}}" class="img-fluid" alt="...">-->
+      </a>
     </div>
   </div>
 </div>
@@ -64,14 +64,6 @@
 
 .btn-link {
   color: #007bff;
-}
-
-.image-container {
-  background-image: url("{{url_for('static', filename='images/ocean_boat.jpg')}}");
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  margin-bottom: 20px;
 }
 
 .btn-circle {

@@ -7,35 +7,46 @@
 var prompts = [
 {
 	prompt: 'When I go on a trip, shopping and seeing the sites is a must.',
-	weight: 5,
+	weight: 3,
 	class: 'group0'
 },
 {
 	prompt: 'I love to get my exercise in, even on holiday.',
-	weight: -10,
+	weight: 5,
 	class: 'group1'
 },
 {
 	prompt: 'When planning a trip I prioritise nice weather over everything else.',
-	weight: 10,
+	weight: -4,
 	class: 'group2'
 },
 {
 	prompt: 'Going on holiday is the perfect time for me to venture out and try something new.',
-	weight: -5,
+	weight: 3,
 	class: 'group3'
 },
+{
+	prompt: 'I would  rather go Skiing than sunbathing.',
+	weight: 5,
+	class: 'group4'
+},
+{
+	prompt: 'I would prefer returning to a destination I liked over trying something new.',
+	weight: -3,
+	class: 'group5'
+},
+{
+	prompt: 'I would take a resort over a hostel every time.',
+	weight: -4,
+	class: 'group6'
+}
 
 ]
+
 
 // This array stores all of the possible values and the weight associated with the value.
 // The stronger agreeance/disagreeance, the higher the weight on the user's answer to the prompt.
 var prompt_values = [
-{
-	value: 'Strongly Disagree',
-	class: 'btn-default btn-strongly-disagree',
-	weight: -1,
-},
 {
 	value: 'Disagree',
 	class: 'btn-default btn-disagree',
@@ -50,11 +61,6 @@ var prompt_values = [
 	value: 'Agree',
 	class: 'btn-default btn-agree',
 	weight: 1,
-},
-{
-	value: 'Strongly Agree',
-	class: 'btn-default btn-strongly-agree',
-	weight: 2,
 }
 ]
 
@@ -182,51 +188,32 @@ $('#submit-btn').click(function () {
 	$('.results').removeClass('hide');
 	$('.results').addClass('show');
 
-	if(total > 8) {
+	if(total > 20) {
 		// document.getElementById('intro-bar').style.width = ((total / 60) * 100) + '%';
 		// console.log(document.getElementById('intro-bar').style.width);
 		// document.getElementById('intro-bar').innerHTML= ((total / 60) * 100) + '%';
-		document.getElementById('results').innerHTML = '<b>Your ideal holiday destination is Beach!</b><br><br>\
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..\n\
+		document.getElementById('results').innerHTML = '<b>Your ideal holiday destination is Vancouver, Canada!</b><br><br>\
+		Vancouver is a coastal seaport city in western Canada, Known for its beautiful natural surroundings, mild climate, and cosmopolitan atmosphere, Vancouver is a popular destination for tourists from all over the world.\n\
 <br><br>\
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.:\n\
+Vancouver is a sports loving city and there a variety of athletic activities for visitors to enjoy, including skiing, snowboarding, hiking and cycling.\
+        ';
+	} else if(total< 20 && total > 10) {
+		document.getElementById('results').innerHTML = '<b>Your ideal holiday destination is Cairo, Egypt!</b><br><br>\
+		Cairo is the capital city of Egypt, located on the banks of the Nile River, Cairo has a rich history and is home to many important landmarks and attractions.\n\
 <br><br>\
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur..\n\n\
+Cairo offers a range of exciting activities, including visiting the pyramids of Giza, exploring the artefacts at the Egyptian museum, wondering around old Cairo and taking a cruise up the Nile river.\
+';
+	} else if(total< 10 && total > 0) {
+		document.getElementById('results').innerHTML = '<b>Your ideal holiday destination is Tokyo, Japan!</b><br><br>\
+		Tokyo is the capital and largest city of Japan, situated on the eastern coast of Honshu Island, and is a major cultural, economic, and political hub of the country.\n\
 <br><br>\
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
-	}
-
-	else if(8 > total > 3) {
-		document.getElementById('results').innerHTML = '<b>Your ideal holiday destination is City!</b><br><br>\
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..\n\
+Tokyo is a bustling metropolis known for its cutting-edge technology, vibrant street fashion, delicious food, and unique blend of traditional and modern culture.\
+';
+	} else {
+		document.getElementById('results').innerHTML = '<b>Your ideal Holiday destination is Sicily, Italy!</b><br><br>\
+		Sicily is the largest island in the Mediterranean Sea and is known for its rich history, beautiful beaches, delicious food, and stunning natural landscapes.\n\
 <br><br>\
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.:\n\
-<br><br>\
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur..\n\n\
-<br><br>\
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
-	}
-
-	else if(3 > total > -2) {
-		document.getElementById('results').innerHTML = '<b>Your ideal holiday destination is Adventure!</b><br><br>\
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..\n\
-<br><br>\
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.:\n\
-<br><br>\
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur..\n\n\
-<br><br>\
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
-	}
-
-	else if (total < -2) {
-		document.getElementById('results').innerHTML = '<b>Your ideal Holiday destination is Active</b><br><br>\
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..\n\
-<br><br>\
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.:\n\
-<br><br>\
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur..\n\n\
-<br><br>\
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+Sicilian beaches are some of the most picturesque in the world with crystal-clear waters and soft, sandy shores. Whether you are looking for a secluded cove or a lively beach scene, there is something for everyone.'
 	}
 
 	// Hide the quiz after they submit their results

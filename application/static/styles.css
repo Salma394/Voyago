@@ -202,11 +202,6 @@ font-size: 20px;
 
 
 
-@media (max-width: 767px) {
-  .navbar-nav {
-    float: none;
-  }
-}
 
 body {
   margin: 0;
