@@ -5,7 +5,7 @@
 }
 
 .navbar-brand {
-  font-size: 5rem;
+  font-size: 6rem;
   color: #7a7a7a;
   font-family: 'Poppins', sans-serif;
 }
@@ -18,9 +18,7 @@ h1{
     opacity: 37%;
 }
 
-.topnav {
-    background-color:c0c0c0;
-    overflow: hidden;
+
   }
 
   /* Style the links inside the navigation bar */
@@ -208,9 +206,7 @@ body {
   padding: 0;
 }
 
-.navbar {
-  margin: 0;
-}
+
 
 
 
@@ -275,9 +271,6 @@ a {
 color: black;
 }
 
-footer {
-  background-color: #f4eee0;
-}
 
 .footer-text {
   color: black;
@@ -294,8 +287,8 @@ transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
     }
 
 .col-md-3:hover img {
-transform: scale(1.1); /* adjust the scale factor to your liking */
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* adjust the box-shadow to your liking */
+transform: scale(1.1);
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
 
 .col-md-3 h5,

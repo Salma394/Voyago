@@ -6,41 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-    <title>{% block title %}{% endblock %}Voyago</title>
-    <link rel="icon" src="images/Heart.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="{{ url_for('static', filename='quiz.js') }}"></script>
+    <!-- navbar -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--    Sign in Icon-->
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" integrity="sha512-VgZpUpWDzeBMdDDfwOsB6gJn6y+zx6UQ2QJpsRfD7zFwZJ6ezZyoE3pFJ3qAaMYy/Sbi58yX+Pz+lL3/QO4mFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <link rel="icon" href="static/Heart.png">
     <link rel="stylesheet" href="{{url_for('static',filename = 'styles.css')}}"/>
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css')}}"/>
 </head>
 
+
 <header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{{ url_for('home') }}">Voyago</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav mr-5">
-        <li class="nav-item active">
-          <a class="nav-link" href="{{ url_for('home') }}" style="font-size: 20px;">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('destinations') }}" style="font-size: 20px;">Destinations</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('contact')}}" style="font-size: 20px;">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{url_for('login')}}" style="font-size: 20px;"><i class="far fa-user"></i>Sign In</a>
-        </li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light  ml-auto">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ url_for('home') }}"style = "color:#585858">Voyago</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('destinations') }}">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('contact')}}">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('login')}}"><i class="far fa-user"></i>Sign In</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-
-
+  </nav>
 </header>
+
 
 <body>
 <div class = "container">
@@ -188,7 +194,7 @@
 
 
  <br>           
-<!-- Subscribe -->
+<<!-- Subscribe -->
 <div class="container text-center py-5">
   <h2>Your travel journey starts here</h2>
   <p class="lead">Sign up for more travel tips and holiday inspirations straight to your inbox</p>
@@ -218,13 +224,30 @@
     const email = emailInput.value;
 
     setTimeout(function() {
+      emailInput.value = '';
+      subscribeBtn.disabled = false;
+      subscribeBtn.classList.remove('btn-success');
+      subscribeBtn.classList.add('btn-primary');
+      subscribeMessage.classList.add('d-none');
+    }, 5000);
+
+    setTimeout(function() {
       subscribeBtn.textContent = 'Subscribed';
       subscribeBtn.disabled = true;
       subscribeBtn.classList.remove('btn-primary');
       subscribeBtn.classList.add('btn-success');
       subscribeMessage.classList.remove('d-none');
-    }, 1000);
+
+      setTimeout(function() {
+        subscribeBtn.textContent = 'Subscribe';
+        subscribeBtn.disabled = false;
+        subscribeBtn.classList.remove('btn-success');
+        subscribeBtn.classList.add('btn-primary');
+        subscribeMessage.classList.add('d-none');
+      }, 5000);
+    }, 10000);
   });
+
 </script>
 
 
@@ -241,7 +264,7 @@
         <a href="{{ url_for('terms') }}">Terms and Conditions</a>
         <a href="{{ url_for('privacy') }}">Privacy Policy</a>
         <a href="{{ url_for('site') }}">Sitemap</a>
-        <a href="{{ url_for('destinations') }}">FAQ</a>
+        <a href="{{ url_for('faq') }}">FAQ</a>
       </div>
       <div class = "fineprint">
         <h6>Sky Campus,Grant Way, Isleworth, TW5 5QD</h6>
@@ -251,5 +274,9 @@
 
      </div>
 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-CW4cd4P4Z0fdtpxlyhKr8LYz98SdSptc/fmuDQ27vycBTVznsCH4GT4LdszzHs+c" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZEQ6zGNTgkPXTGy6N9U6ww" crossorigin="anonymous"></script>
 </body>
+
 </html>

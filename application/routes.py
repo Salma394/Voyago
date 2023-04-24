@@ -86,6 +86,10 @@ def terms():
     return render_template('terms.html')
 
 
+@app.route('/faq',methods=['GET'])
+def faq():
+    return render_template('faq.html')
+
 @app.route('/profile',methods=['GET'])
 def profile():
     return render_template('profile.html')
