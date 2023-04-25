@@ -107,6 +107,7 @@ h1{
 }
 
 
+
   h2{
     font-size: 40px;
     opacity: 70%;
@@ -297,3 +298,135 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 text-align: center;
     }
 
+.result-box ul {
+    border-top: 1px solid #999;
+    /* padding: 15px 10px; */
+}
+/* for suggested countries when user searches on the website*/
+.result-box ul li {
+    list-style-type: none;
+    border-radius: 3px;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+.result-box ul li:hover {
+    /* background: #E9F3FF; */
+    background: rgb(149, 151, 149);
+}
+.result-box * {
+    margin: 0;
+    padding: 0;
+}
+.result-box {
+    min-width: 300px;
+    max-height: 300px;
+    overflow-y: scroll;
+    position: absolute;
+}
+.search-box #search-input,#search-button
+{
+    height: 50px;
+}
+#search-input
+{
+    border-color: #fff;
+}
+.input-group-rounded .input-group-field {
+    border-radius: 5000px 0 0 5000px;
+    padding-left: 1rem;
+}
+.input-group-rounded .input-group-button .button {
+    border-radius: 0 5000px 5000px 0;
+    font-size: 0.8rem;
+}
+
+/* destinations*/
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.container-backgroundimg {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/static/images/activity.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.row {
+    display: flex;
+    /* height: 88%; */
+    align-items: center;
+}
+.col {
+    flex-basis: 50%;
+}
+
+
+
+
+ explore {
+    height: 50px;
+    width: 180px;
+    color: #000;
+    font-size: 12px;
+    padding: 12px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 40px;
+    outline: none;
+    margin-top: 30px;
+}
+.card_locations {
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url("/static/images/japan2.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: transform: 0.5s;
+}
+.card1 {
+    background-image: href = url("/static/images/egpyt2.jpg");
+}
+.card2 {
+    background-image: url("/static/images/scicily.jpg");
+}
+.card3 {
+    background-image: url("/static/images/vanc2.jpg");
+}
+.card4 {
+    background-image: url("/static/images/japan2.jpg");
+}
+.card_locations:hover {
+    transform: translateY(-10px);
+}
+
+.card p {
+    text-shadow: 0 0 15px #999;
+    font-size: 8px;
+}
+
+#search-suggestions {
+  position: absolute;
+  background-color: #f1f1f1;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  z-index: 1;
+  width: 100%;
+}
+
+#search-suggestions li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#search-suggestions li:hover {
+  background-color: #e9e9e9;
+}
