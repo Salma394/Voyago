@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block main_content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5"> <!-- Updated from col-lg-6 -->
+      <h2 class="mb-4 text">Beach</h2>
+      <p class="lead mb-4 text"> Seaside Serenity: Indulge in sun-kissed beaches, tranquil shorelines, and the soothing embrace of the sea as you unwind and rejuvenate your senses.</p>
+      <a href="{{ url_for('home') }}" class="btn btn-primary rounded-pill px-4">Explore</a>
+    </div>
+    <div class="col-lg-7 d-flex align-items-center justify-content-center"> <!-- Updated from col-lg-6 -->
+      <div class="row" style="margin-top: 50px;">
+        <div class="col-md-4 mb-4">
+          <div class="card_locations card1">
+            <div class="card-body">
+              <h5 class="card-title">Sicily</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card_locations card2">
+            <div class="card-body">
+              <h5 class="card-title">Maldives</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card_locations card3">
+            <div class="card-body">
+              <h5 class="card-title">Seychelles</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card_locations card4">
+            <div class="card-body">
+              <h5 class="card-title">Bora Bora</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card_locations card5">
+            <div class="card-body">
+              <h5 class="card-title">Bali</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card_locations card6">
+            <div class="card-body">
+              <h5 class="card-title">Mauritius</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+
+    <style>
+  .card_locations {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card_locations img {
+    height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+  }
+</style>
+
+
+</style>
+{% endblock %}
+
+
+

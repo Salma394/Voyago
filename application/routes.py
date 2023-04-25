@@ -21,10 +21,28 @@ location_controller = LocationController()
 def home():
     return render_template('home.html')
 
-
 @app.route('/destinations',methods=['GET'])
 def destinations():
     return render_template('destinations.html')
+
+@app.route('/destinations/city',methods=['GET'])
+def city():
+    return render_template('city.html')
+
+@app.route('/destinations/beach',methods=['GET'])
+def beach():
+    return render_template('beach.html')
+
+@app.route('/destinations/adventure',methods=['GET'])
+def adventure():
+    return render_template('adventure.html')
+
+@app.route('/destinations/activity',methods=['GET'])
+def activity():
+    return render_template('activity.html')
+
+
+
 
 @app.route('/about')
 def about():
@@ -194,3 +212,4 @@ def contact():
 @app.errorhandler(404)
 def page_not_found():
     return render_template('404.html'), 404
+

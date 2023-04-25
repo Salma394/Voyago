@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block main_content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5"> <!-- Updated from col-lg-6 -->
+      <h2 class="mb-4 text">Activity</h2>
+      <p class="lead mb-4 text">Find Your Passion: Dive into a world of exhilarating activities, from heart-pumping sports to leisurely pursuits, and let your interests guide your adventures.</p>
+      <a href="{{ url_for('home') }}" class="btn btn-primary rounded-pill px-4">Explore</a>
+    </div>
+    <div class="col-lg-7 d-flex align-items-center justify-content-center"> <!-- Updated from col-lg-6 -->
+      <div class="row" style="margin-top: 50px;">
+        <div class="col-md-4 mb-4">
+          <div class="card_locations card1">
+            <div class="card-body">
+              <h5 class="card-title">Queenstown,New Zealand</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card_locations card2">
+            <div class="card-body">
+              <h5 class="card-title">Chamonix, France</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card_locations card3">
+            <div class="card-body">
+              <h5 class="card-title">Vancouver,Canada</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card_locations card4">
+            <div class="card-body">
+              <h5 class="card-title">Interlaken,Switzerland</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card_locations card5">
+            <div class="card-body">
+              <h5 class="card-title">Costa Rica</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card_locations card6">
+            <div class="card-body">
+              <h5 class="card-title">Moab,Utah,USA</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+
+    <style>
+  .card_locations {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card_locations img {
+    height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+  }
+</style>
+
+
+</style>
+{% endblock %}
+
+
+
