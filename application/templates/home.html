@@ -76,30 +76,38 @@
 <div class="container">
   <div class="row no-gutters">
     <div class="col-md-3 text-center">
-      <img style="width: auto; height: 200px; border-radius: 20px; margin-bottom: 10px;" src="{{url_for('static', filename='images/beachpic.jpg')}}"/>
-      <h5 class="country_subheading2">Beach</h5>
-      <p>Sandy shores and endless waves - let the sea set you free!</p>
+      <a href="{{ url_for('beach') }}">
+        <img style="width: auto; height: 200px; border-radius: 20px; margin-bottom: 10px;" src="{{url_for('static', filename='images/beachpic.jpg')}}"/>
+        <h5 class="country_subheading2">Beach</h5>
+        <p>Sandy shores and endless waves - let the sea set you free!</p>
+      </a>
     </div>
     <div class="col-md-3 text-center">
-      <img style="width: auto; height: 200px; border-radius: 20px; margin-bottom: 10px;" src="{{url_for('static', filename='images/budapest.jpg')}}"/>
-      <h5 class="country_subheading2">City Break</h5>
-      <p>Explore urban wonders where every street is a new adventure.</p>
+      <a href="{{ url_for('city') }}">
+        <img style="width: auto; height: 200px; border-radius: 20px; margin-bottom: 10px;" src="{{url_for('static', filename='images/budapest.jpg')}}"/>
+        <h5 class="country_subheading2">City Break</h5>
+        <p>Explore urban wonders where every street is a new adventure.</p>
+      </a>
     </div>
     <div class="col-md-3 text-center">
-      <img style="width: auto; height: 200px; border-radius: 20px; margin-bottom: 10px;" src="{{url_for('static', filename='images/adventure.jpg')}}"/>
-      <h5 class="country_subheading2">Adventure</h5>
-      <p>Push your limits and discover the thrill of the unknown.</p>
+      <a href="{{ url_for('adventure') }}">
+        <img style="width: auto; height: 200px; border-radius: 20px; margin-bottom: 10px;" src="{{url_for('static', filename='images/adventure.jpg')}}"/>
+        <h5 class="country_subheading2">Adventure</h5>
+        <p>Push your limits and discover the thrill of the unknown.</p>
+      </a>
     </div>
     <div class="col-md-3 text-center">
-      <img style="width: auto; height: 200px; border-radius: 20px; margin-bottom: 10px;" src="{{url_for('static', filename='images/activity.jpg')}}"/>
-      <h5 class="country_subheading2">Activity</h5>
-      <p>From heart-pumping sports to laid-back hobbies, find your passion and let it guide you.</p>
+      <a href="{{ url_for('activity') }}">
+        <img style="width: auto; height: 200px; border-radius: 20px; margin-bottom: 10px;" src="{{url_for('static', filename='images/activity.jpg')}}"/>
+        <h5 class="country_subheading2">Activity</h5>
+        <p>From heart-pumping sports to laid-back hobbies, find your passion and let it guide you.</p>
+      </a>
     </div>
   </div>
 </div>
 
+</section>
 
-   </section>
 </div>
 <br>
 
