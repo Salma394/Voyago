@@ -58,7 +58,6 @@ class DataProviderService:
     def logout(self):
         session.pop('user_id', None)
         session.pop('user_email', None)
-        session.pop('user_name', None)
         return True, 'Logout successful'
 
     def add_user(self, firstname, lastname, email, password):

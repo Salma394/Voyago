@@ -142,6 +142,7 @@ def login():
         password = form.password.data
         result, message = data_provider.login(email, password)
         if result:
+            session['user_email'] = email
             return redirect(url_for('profile'))
         else:
             error = "Incorrect Email or Password. Please try Again!"
@@ -149,15 +150,12 @@ def login():
     else:
         return render_template('login.html', form=form)
 
-
-@app.route('/logout')
+@app.route('/logout/')
 def logout():
-    result, message = data_provider.logout()
-    if result:
-        return redirect(url_for('login'))
-    else:
-        error = message
-        return render_template('error.html', error=error)
+    session.pop('user_email', None)
+    return redirect(url_for('home'))
+
+
 
 
 @app.route('/quiz',methods=['GET','POST'])

@@ -3,13 +3,14 @@
 
 
 <h2>Profile</h2>
-<h3>{{ profile_message }}</h3>
-<p>Welcome to your saved holiday inspiration!><i class="fa-solid fa-heart" style="color: #da1b8a;"></i></p>
+
+<p>Welcome back to your travel wishlist! Let's start planning your next adventure. Browse our destinations and find the perfect getaway for you. Happy travels!<i class="fa-solid fa-heart" style="color: #da1b8a;"></i></p>
 
 
 <div class="container">
 <h2>Saved Destinations</h2>
 <div class = "paragraph1">
+    <p>From tropical beaches to historic cities, add any destination you're interested in to this list and start planning your next unforgettable trip.</p>
 </div>
 
 <div class="row2">
@@ -83,6 +84,159 @@
     </div>
        </div>
 
+<div class="container">
+<h2>Saved Accommodation</h2>
+<div class = "paragraph1">
+    <p>  <p>Never forget a great hotel again! Keep a list of your favorite accommodations so you can easily book the best one for your next vacation.</p></p>
+</div>
+
+<div class="row2">
+<div class="column2">
+        <div class="container">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-lg-4 text-center">
+                            <img  style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Fairmont_pacific_vancouver.jpeg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Fairmont Pacific Rim, Vancouver</p>
+                          <span class="heart-icon">&#x2665;</span>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Burj_alarab.jpeg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Burj Al Arab, Dubai</p>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/mountain_cherry.jpg')}}" class="d-block w-100" alt="..."/>
+                            <p class = "country_subheading">Ritz Paris, Paris</p>
+                        </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                    <div class="col-lg-4 text-center">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Turks and Caicos .jpeg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Turks and Caicos</p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/denmark.jpg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Copenhagen, Denmark</p>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Algarve.jpeg')}}" class="d-block w-100" alt="..."/>
+                            <p class = "country_subheading">Algarve, Portugal</p>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-lg-4 text-center">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/marrakech.jpg')}}" class="d-block w-100" alt="..."/>
+                            <p class = "country_subheading">Marrakech, Morroco</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+    </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </div>
+       </div>
+
+<div class="container">
+<h2>Saved Activities</h2>
+<div class = "paragraph1">
+    <p>Make the most of your trip by saving all the activities you want to do! Whether it's hiking, sightseeing, or trying new foods, keep them all in one place.</p>
+</div>
+
+<div class="row2">
+<div class="column2">
+        <div class="container">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-lg-4 text-center">
+                            <img  style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Venice.webp')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Venice, Italy</p>
+                          <span class="heart-icon">&#x2665;</span>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Keukenhof-Holland.jpg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Amsterdam, The Netherlands</p>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/mountain_cherry.jpg')}}" class="d-block w-100" alt="..."/>
+                            <p class = "country_subheading">Yoshino, Japan</p>
+                        </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                    <div class="col-lg-4 text-center">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Turks and Caicos .jpeg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Turks and Caicos</p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/denmark.jpg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Copenhagen, Denmark</p>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Algarve.jpeg')}}" class="d-block w-100" alt="..."/>
+                            <p class = "country_subheading">Algarve, Portugal</p>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-lg-4 text-center">
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/marrakech.jpg')}}" class="d-block w-100" alt="..."/>
+                            <p class = "country_subheading">Marrakech, Morroco</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+    </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </div>
+       </div>
 
 <style>
   .heart-icon {

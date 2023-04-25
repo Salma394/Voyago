@@ -19,7 +19,12 @@ h1{
 }
 
 
-  }
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
 
   /* Style the links inside the navigation bar */
   .topnav a {
@@ -386,19 +391,21 @@ text-align: center;
     box-sizing: border-box;
     cursor: pointer;
     margin: 10px 15px;
-    background-image: url("/static/images/japan2.jpg");
+    background-image: url("/static/images/egpyt2.jpg");
     background-position: center;
     background-size: cover;
     transition: transform: 0.5s;
 }
 .card1 {
-    background-image: href = url("/static/images/egpyt2.jpg");
+    background-image: href = url("/static/images/tokyo.jpg");
+
 }
 .card2 {
     background-image: url("/static/images/scicily.jpg");
 }
 .card3 {
     background-image: url("/static/images/vanc2.jpg");
+    <a url("{{ url_for('home') }}")</a>;
 }
 .card4 {
     background-image: url("/static/images/japan2.jpg");
@@ -430,3 +437,26 @@ text-align: center;
 #search-suggestions li:hover {
   background-color: #e9e9e9;
 }
+
+.card-text {
+  color: white;
+  background-color: transparent;
+}
+.card_locations {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  height: 250px;
+}
+.card-text-transparent {
+  background-color: transparent;
+}
+
+.card-title h5 {
+  font-weight: bold;
+  font-size: .5em;
+  margin: 0;
+    background-color: transparent;
+     color: whitesmoke;
+}
+

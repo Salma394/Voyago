@@ -1,58 +1,47 @@
 {% extends "layout.html" %}
 
 {% block main_content %}
-<div class="container-backgroundimg">
+<div class = "container">
+  <div class="row">
+    <div class="col-lg-6">
+      <h2 class="mb-4 text">Destinations</h2>
+      <p class="lead mb-4 text">Discover Your Dream Getaway: Unwind, Explore, and Create Lasting Memories with Our Ultimate Holiday Destinations!</p>
+      <a href="{{ url_for('home') }}" class="btn btn-primary rounded-pill px-4">Explore</a>
 
-    <div class="row">
-        <div class="col-lg-6">
-            <h2 class="mb-4">Destinations</h2>
-            <p class="lead mb-4">Discover Your Dream Getaway: Unwind, Explore, and Create Lasting Memories with Our Ultimate Holiday Destinations!</p>
-            <div class="input-group mb-4">
-                <input id="search-input" type="search" class="form-control rounded-pill border-0 py-2" placeholder="Search...">
-                <button id="search-button" type="button" class="btn btn-secondary rounded-pill px-4">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-            <button id="explore" type="button" class="btn btn-primary rounded-pill px-4">Explore</button>
-        </div>
-        <div class="col-lg-6 d-flex align-items-center justify-content-center">
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card_locations card1">
-                        <div class="card-body">
-                            <h5 class="card-title">Cairo</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card_locations card2">
-                        <div class="card-body">
-                            <h5 class="card-title">Tokyo</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card_locations  card3">
-                        <div class="card-body">
-                            <h5 class="card-title">Vancouver</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card_locations  card4">
-                        <div class="card-body">
-                            <h5 class="card-title">Sicily</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-
+    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+      <div class="row" style="margin-top: 50px;">
+        <div class="col-md-6 mb-4">
+          <div class="card_locations card1">
+            <div class="card-body">
+              <h5 class="card-title">Cairo</h5>
+            </div>
+          </div>
+          <a href="{{ url_for('home') }}"></a>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card_locations card2">
+            <div class="card-body">
+              <h5 class="card-title">Sicily</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card_locations card3">
+            <div class="card-body">
+              <h5 class="card-title">Vancouver</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card_locations card4">
+            <div class="card-body">
+              <h5 class="card-title">Tokyo</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
 {% endblock %}
