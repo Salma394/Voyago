@@ -87,3 +87,5 @@ CREATE TABLE image (
     CONSTRAINT fk_location_i FOREIGN KEY (city_id) REFERENCES location(city_id),
     CONSTRAINT fk_image_category FOREIGN KEY (image_category_id) REFERENCES image_category(image_category_id)
 );
+
+
