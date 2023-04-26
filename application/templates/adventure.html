@@ -12,44 +12,46 @@
     <div class="col-lg-7 d-flex align-items-center justify-content-center"> <!-- Updated from col-lg-6 -->
       <div class="row" style="margin-top: 50px;">
         <div class="col-md-4 mb-4">
+            <a href="{{ url_for('location', city='cairo') }}">
           <div class="card_adventure card1">
-            <div class="card-body">
-              <h5 class="card-title">Cairo</h5>
+        <div class="card-overlay">
+              <h5 class="card-text">Cairo</h5>
             </div>
           </div>
+              </a>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card_adventure card2">
-            <div class="card-body">
-              <h5 class="card-title">Iceland</h5>
+            <div class="card-overlay">
+              <h5 class="card-text">Iceland</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card_adventure card3">
-            <div class="card-body">
-              <h5 class="card-title">Alaska, USA</h5>
+            <div class="card-overlay">
+              <h5 class="card-text">Alaska</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card_adventure card4">
-            <div class="card-body">
-              <h5 class="card-title">Masai Mara, Kenya</h5>
+            <div class="card-overlay">
+              <h5 class="card-text">Masai Mara</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card_adventure card5">
-            <div class="card-body">
-              <h5 class="card-title">Tanzania</h5>
+     <div class="card-overlay">
+              <h5 class="card-text">Tanzania</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card_adventure card6">
-            <div class="card-body">
-              <h5 class="card-title">Patagonia</h5>
+        <div class="card-overlay">
+              <h5 class="card-text">Patagonia</h5>
             </div>
           </div>
         </div>
@@ -100,7 +102,6 @@
 }
 .card3 {
     background-image: url("/static/images/alaska.jpg");
-    <a url("{{ url_for('home') }}")</a>;
 }
 .card4 {
     background-image: url("/static/images/masaimara.jpg");
@@ -114,9 +115,40 @@
     background-image: url("/static/images/patagonia.jpg");
 }
 .card_adventure:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
+
+.card-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_adventure:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-text {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 </style>
+
 {% endblock %}
 
 

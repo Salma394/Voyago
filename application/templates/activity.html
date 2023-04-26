@@ -12,44 +12,46 @@
     <div class="col-lg-7 d-flex align-items-center justify-content-center"> <!-- Updated from col-lg-6 -->
       <div class="row" style="margin-top: 50px;">
         <div class="col-md-4 mb-4">
+           <a href="{{ url_for('location', city='vancouver') }}">
           <div class="card_activity card1">
-            <div class="card-body">
-              <h5 class="card-title">Vancouver,Canada</h5>
+         <div class="card-overlay">
+              <h5 class="card-text">Vancouver</h5>
             </div>
           </div>
+           </a>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card_activity card2">
-            <div class="card-body">
-              <h5 class="card-title">Chamonix, France</h5>
+          <div class="card-overlay">
+              <h5 class="card-text">Chamonix, France</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card_activity card3">
-            <div class="card-body">
-              <h5 class="card-title">Queenstown</h5>
+        <div class="card-overlay">
+              <h5 class="card-text">Queenstown</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card_activity card4">
-            <div class="card-body">
-              <h5 class="card-title">Interlaken,Switzerland</h5>
+      <div class="card-overlay">
+              <h5 class="card-text">Interlaken</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card_activity card5">
-            <div class="card-body">
-              <h5 class="card-title">Costa Rica</h5>
+            <div class="card-overlay">
+              <h5 class="card-text">Costa Rica</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card_activity card6">
-            <div class="card-body">
-              <h5 class="card-title">Moab,Utah,USA</h5>
+            <div class="card-overlay">
+              <h5 class="card-text">Moab,Utah</h5>
             </div>
           </div>
         </div>
@@ -114,9 +116,40 @@
 .card6 {
     background-image: url("/static/images/moab.jpg");
 }
+
 .card_activity:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
+
+.card-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_activity:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-text {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 </style>
 
 {% endblock %}

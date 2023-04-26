@@ -12,11 +12,13 @@
     <div class="col-lg-7 d-flex align-items-center justify-content-center"> <!-- Updated from col-lg-6 -->
       <div class="row" style="margin-top: 50px;">
         <div class="col-md-4 mb-4">
+            <a href="{{ url_for('location', city='sicily') }}">
       <div class="card_beach card1">
         <div class="card-overlay">
           <p class="card-text">Sicily</p>
             </div>
           </div>
+            </a>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card_beach card2">
@@ -128,6 +130,9 @@
   right: 0;
   top: 0;
   transition: opacity 0.0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card_beach:hover .card-overlay {

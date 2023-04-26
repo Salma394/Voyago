@@ -1,46 +1,144 @@
 {% extends "layout.html" %}
 
 {% block main_content %}
-<div class = "container">
+<div class="container">
   <div class="row">
     <div class="col-lg-6">
-      <h2 class="mb-4 text">Destinations</h2>
+      <h2 class="mb-4 text">Destination Categories</h2>
       <p class="lead mb-4 text">Discover Your Dream Getaway: Unwind, Explore, and Create Lasting Memories with Our Ultimate Holiday Destinations!</p>
       <a href="{{ url_for('home') }}" class="btn btn-primary rounded-pill px-4">Explore</a>
-
     </div>
     <div class="col-lg-6 d-flex align-items-center justify-content-center">
       <div class="row" style="margin-top: 50px;">
         <div class="col-md-6 mb-4">
-          <div class="card_locations card1">
-            <div class="card-body">
-              <h5 class="card-title">Cairo</h5>
+          <a href="{{ url_for('city') }}">
+            <div class="card_destinations card1">
+              <div class="card-overlay">
+                <h5 class="card-text">City Break</h5>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="col-md-6 mb-4">
-          <div class="card_locations card2">
-            <div class="card-body">
-              <h5 class="card-title">Sicily</h5>
+          <a href="{{ url_for('beach') }}">
+            <div class="card_destinations card2">
+              <div class="card-overlay">
+                <h5 class="card-text">Beach</h5>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="col-md-6 mb-4">
-          <div class="card_locations card3">
-            <div class="card-body">
-              <h5 class="card-title">Vancouver</h5>
+          <a href="{{ url_for('activity') }}">
+            <div class="card_destinations card3">
+              <div class="card-overlay">
+                <h5 class="card-text">Activity</h5>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="col-md-6 mb-4">
-          <div class="card_locations card4">
-            <div class="card-body">
-              <h5 class="card-title">Tokyo</h5>
+          <a href="{{ url_for('adventure') }}">
+            <div class="card_destinations card4">
+              <div class="card-overlay">
+                <h5 class="card-text">Adventure</h5>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+<style>
+
+  .card_destinations {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card_destinations img {
+    height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+  }
+
+  .card_destinations {
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url("/static/images/tokyo.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: transform: 0.5s;
+}
+.card1 {
+    background-image: href = url("/static/images/borabora2.jpg");
+
+}
+.card2 {
+    background-image: url("/static/images/borabora3.jpg");
+}
+.card3 {
+    background-image: url("/static/images/chamonix.jpg");
+    <a url("{{ url_for('home') }}")</a>;
+}
+.card4 {
+    background-image: url("/static/images/patagonia.jpg");
+}
+
+.card_destinations:hover {
+  transform: translateY(-10px);
+}
+
+.card-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_destinations:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-text {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+</style>
+
+
+
+
+
+
+
 {% endblock %}
