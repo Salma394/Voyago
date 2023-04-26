@@ -12,44 +12,44 @@
     <div class="col-lg-7 d-flex align-items-center justify-content-center"> <!-- Updated from col-lg-6 -->
       <div class="row" style="margin-top: 50px;">
         <div class="col-md-4 mb-4">
-          <div class="card_locations card1">
-            <div class="card-body">
-              <h5 class="card-title">Sicily</h5>
+      <div class="card_beach card1">
+        <div class="card-overlay">
+          <p class="card-text">Sicily</p>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card_locations card2">
-            <div class="card-body">
-              <h5 class="card-title">Maldives</h5>
+          <div class="card_beach card2">
+            <div class="card-overlay">
+              <h5 class="card-text">Maldives</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card_locations card3">
-            <div class="card-body">
-              <h5 class="card-title">Seychelles</h5>
+          <div class="card_beach card3">
+            <div class="card-overlay">
+              <h5 class="card-text">Seychelles</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card_locations card4">
-            <div class="card-body">
-              <h5 class="card-title">Bora Bora</h5>
+          <div class="card_beach card4">
+             <div class="card-overlay">
+              <h5 class="card-text">Bora Bora</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card_locations card5">
-            <div class="card-body">
-              <h5 class="card-title">Bali</h5>
+          <div class="card_beach card5">
+             <div class="card-overlay">
+              <h5 class="card-text">Rhodes</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card_locations card6">
-            <div class="card-body">
-              <h5 class="card-title">Mauritius</h5>
+          <div class="card_beach card6">
+             <div class="card-overlay">
+              <h5 class="card-text">Mauritius</h5>
             </div>
           </div>
         </div>
@@ -61,13 +61,13 @@
 <style>
 
     <style>
-  .card_locations {
+  .card_beach {
     height: 100%;
     overflow: hidden;
     position: relative;
   }
 
-  .card_locations img {
+  .card_beach img {
     height: 100%;
     min-width: 100%;
     object-fit: cover;
@@ -76,10 +76,47 @@
     transform: translateY(-50%);
     width: auto;
   }
-</style>
+
+  .card_beach {
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url("/static/images/sicily.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: transform: 0.5s;
+}
+.card1 {
+    background-image: href = url("/static/images/maldives.jpg");
+
+}
+.card2 {
+    background-image: url("/static/images/maldives.jpg");
+}
+.card3 {
+    background-image: url("/static/images/seychelles2.jpg");
+    <a url("{{ url_for('home') }}")</a>;
+}
+.card4 {
+    background-image: url("/static/images/borabora3.jpeg");
+}
+
+.card5 {
+    background-image: url("/static/images/rhodes.jpg");
+}
+
+.card6 {
+    background-image: url("/static/images/mauritius.jpg");
+}
 
 
 </style>
+
 {% endblock %}
 
 

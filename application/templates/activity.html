@@ -12,42 +12,42 @@
     <div class="col-lg-7 d-flex align-items-center justify-content-center"> <!-- Updated from col-lg-6 -->
       <div class="row" style="margin-top: 50px;">
         <div class="col-md-4 mb-4">
-          <div class="card_locations card1">
-            <div class="card-body">
-              <h5 class="card-title">Queenstown,New Zealand</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card_locations card2">
-            <div class="card-body">
-              <h5 class="card-title">Chamonix, France</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card_locations card3">
+          <div class="card_activity card1">
             <div class="card-body">
               <h5 class="card-title">Vancouver,Canada</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card_locations card4">
+          <div class="card_activity card2">
+            <div class="card-body">
+              <h5 class="card-title">Chamonix, France</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card_activity card3">
+            <div class="card-body">
+              <h5 class="card-title">Queenstown</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card_activity card4">
             <div class="card-body">
               <h5 class="card-title">Interlaken,Switzerland</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card_locations card5">
+          <div class="card_activity card5">
             <div class="card-body">
               <h5 class="card-title">Costa Rica</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card_locations card6">
+          <div class="card_activity card6">
             <div class="card-body">
               <h5 class="card-title">Moab,Utah,USA</h5>
             </div>
@@ -58,16 +58,17 @@
   </div>
 </div>
 
+
 <style>
 
     <style>
-  .card_locations {
+  .card_activity {
     height: 100%;
     overflow: hidden;
     position: relative;
   }
 
-  .card_locations img {
+  .card_activity img {
     height: 100%;
     min-width: 100%;
     object-fit: cover;
@@ -76,10 +77,48 @@
     transform: translateY(-50%);
     width: auto;
   }
+
+  .card_activity {
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url("/static/images/vancouverca.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: transform: 0.5s;
+}
+.card1 {
+    background-image: href = url("/static/images/vancouverca.jpg");
+
+}
+.card2 {
+    background-image: url("/static/images/chamonix.jpg");
+}
+.card3 {
+    background-image: url("/static/images/queenstown.jpg");
+    <a url("{{ url_for('home') }}")</a>;
+}
+.card4 {
+    background-image: url("/static/images/interlaken.jpg");
+}
+
+.card5 {
+    background-image: url("/static/images/costarica.jpg");
+}
+
+.card6 {
+    background-image: url("/static/images/moab.jpg");
+}
+.card_activity:hover {
+    transform: translateY(-10px);
+}
 </style>
 
-
-</style>
 {% endblock %}
 
 

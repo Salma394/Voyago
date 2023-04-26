@@ -12,42 +12,42 @@
     <div class="col-lg-7 d-flex align-items-center justify-content-center"> <!-- Updated from col-lg-6 -->
       <div class="row" style="margin-top: 50px;">
         <div class="col-md-4 mb-4">
-          <div class="card_locations card1">
+          <div class="card_adventure card1">
             <div class="card-body">
               <h5 class="card-title">Cairo</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card_locations card2">
+          <div class="card_adventure card2">
             <div class="card-body">
               <h5 class="card-title">Iceland</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card_locations card3">
+          <div class="card_adventure card3">
             <div class="card-body">
               <h5 class="card-title">Alaska, USA</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card_locations card4">
+          <div class="card_adventure card4">
             <div class="card-body">
               <h5 class="card-title">Masai Mara, Kenya</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card_locations card5">
+          <div class="card_adventure card5">
             <div class="card-body">
               <h5 class="card-title">Tanzania</h5>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card_locations card6">
+          <div class="card_adventure card6">
             <div class="card-body">
               <h5 class="card-title">Patagonia</h5>
             </div>
@@ -61,13 +61,13 @@
 <style>
 
     <style>
-  .card_locations {
+  .card_adventure {
     height: 100%;
     overflow: hidden;
     position: relative;
   }
 
-  .card_locations img {
+  .card_adventure img {
     height: 100%;
     min-width: 100%;
     object-fit: cover;
@@ -76,9 +76,46 @@
     transform: translateY(-50%);
     width: auto;
   }
-</style>
 
+  .card_adventure {
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url("/static/images/egypt.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: transform: 0.5s;
+}
+.card1 {
+    background-image: href = url("/static/images/egypt.jpg");
 
+}
+.card2 {
+    background-image: url("/static/images/iceland.jpg");
+}
+.card3 {
+    background-image: url("/static/images/alaska.jpg");
+    <a url("{{ url_for('home') }}")</a>;
+}
+.card4 {
+    background-image: url("/static/images/masaimara.jpg");
+}
+
+.card5 {
+    background-image: url("/static/images/tanzania.jpg");
+}
+
+.card6 {
+    background-image: url("/static/images/patagonia.jpg");
+}
+.card_adventure:hover {
+    transform: translateY(-10px);
+}
 </style>
 {% endblock %}
 
