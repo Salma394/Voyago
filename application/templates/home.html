@@ -33,17 +33,23 @@
             <a class="nav-link" href="{{ url_for('home') }}">Home</a>
           </li>
           <li class="nav-item"style="padding-right: 40px;">
-            <a class="nav-link" href="{{ url_for('destinations') }}">Destinations <i class="fas fa-heart" style="color: #da1b8a;"></i>
+            <a class="nav-link" href="{{ url_for('destinations') }}">Destinations   <i class="fas fa-heart" style="color: #da1b8a;" id="animated-heart"></i>
 </a>
           </li>
           <li class="nav-item"style="padding-right: 40px;">
             <a class="nav-link" href="{{ url_for('contact')}}">Contact Us</a>
           </li>
-           <li class="nav-item"style="padding-right: 40px;">
+            </li>
+       {% if 'user_email' in session %}
+          <li class="nav-item" style="padding-right: 40px;">
+              <a class="nav-link" href="{{ url_for('profile') }}">Profile</a>
+          </li>
+        {% endif %}
+        <li class="nav-item" style="padding-right: 40px;">
           {% if 'user_email' in session %}
-            <a class="nav-link" href="/logout">Logout <i class="fas fa-user"></i></a>
+            <a class="nav-link" href="/logout">Logout <i class="far fa-user"></i></a>
           {% else %}
-            <a class="nav-link" href="/login">Sign in <i class="far fa-user"></i></a>
+                <a class="nav-link" href="/login">Sign in <i class="fas fa-user"></i></a>
           {% endif %}
         </ul>
       </div>
@@ -225,6 +231,7 @@
   </div>
 </div>
 
+<!--JS for Marketing form-->
 <script>
   const form = document.getElementById('subscribe-form');
   const emailInput = document.getElementById('email-input');
@@ -260,12 +267,33 @@
     }, 0);
   });
 
-</script>
+<!--JS for heart-->
+
+       document.getElementById('animated-heart').classList.add('pulse');
+  </script>
+
+
 
 <style>
   .container-fluid-custom {
     padding-left: 40px; /* Adjust this value to increase or decrease the space */
   }
+
+    .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
 </style>
 
 
