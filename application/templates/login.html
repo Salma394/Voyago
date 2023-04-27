@@ -5,8 +5,8 @@
 <div class = "container">
   <div class="banner">
     <img src="{{url_for('static', filename='images/ocean_boat.jpg')}}"/>
-      <div class="banner-text">
-      <h4>Welcome Back!</h4>
+      <div class="banner-text_login">
+      <h4></h4>
   </div>
 </div>
 <br>
@@ -36,17 +36,17 @@
       </div>
     </div>
     <br>
-    <div class="d-flex justify-content-center">
-        <a href="#" class="btn btn-google btn-circle mr-2">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="#" class="btn btn-apple btn-circle">
-          <i class="fab fa-apple"></i>
+      <div class="d-flex justify-content-center">
+    <p>or sign in with</p>
+        <i class="fab fa-google fa-1x btn-google"></i>
+      </a>
+      <a href="#">
+        <i class="fab fa-apple fa-1x btn-apple"></i>
       </a>
     </div>
   </div>
 </div>
-
+</div>
 
 <style>
 .card {
@@ -60,7 +60,6 @@
     color: red;
 }
 
-
 .btn-primary {
   background-color: #007bff;
   border-color: #007bff;
@@ -71,27 +70,43 @@
   border-color: #0062cc;
 }
 
+.btn-google, .btn-apple {
+  margin: 20px; /* adjust as needed */
+}
+
+.fa-google, .fa-apple {
+  line-height: 20px; /* adjust as needed */
+}
+
 .btn-link {
   color: #007bff;
 }
 
-.btn-circle {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  padding: 8px;
+.banner-text_login {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  transform: translateY(-50%);
+  text-align: left;
+  color: white;
+  font-size: 2em;
+  background-color: transparent;
 }
 
-.btn-google {
-  background-color: #db4a39;
-  border-color: #db4a39;
-  color: #fff;
+.banner-text_login h4 {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0;
+  background-color: transparent;
+  color: #f0f8ff;
 }
 
-.btn-apple {
-  background-color: #000;
-  border-color: #000;
-  color: #fff;
+.banner-text_login h5 {
+  font-size: 1.0em;
+  margin-top: 20px;
+  background-color: transparent;
+  color: white;
+  text-align: left;
 }
 </style>
 

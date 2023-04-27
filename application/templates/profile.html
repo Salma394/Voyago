@@ -1,11 +1,13 @@
 {% extends "layout.html" %}
 {% block main_content %}
-
-
+<title>Travel Wishlist</title>
+<div class = "container">
 <h2>Profile</h2>
-
-<p>Welcome back to your travel wishlist! Let's start planning your next adventure. Browse our destinations and find the perfect getaway for you. Happy travels!<i class="fa-solid fa-heart" style="color: #da1b8a;"></i></p>
-
+    <div class = "paragraph1">
+<p>Welcome back to your travel wishlist! Let's start planning your next adventure. Browse our destinations and find the perfect getaway for you. Happy travels! <i class="fas fa-heart" style="color: #da1b8a;"
+                                                                                                                                                                   id="animated-heart"></i></p>
+</div>
+</div>
 
 <div class="container">
 <h2>Saved Destinations</h2>
@@ -22,16 +24,16 @@
                 <div class="row">
                     <div class="col-lg-4 text-center">
                             <img  style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Venice.webp')}}" class="d-block w-100" alt="..."/>
-                        <p class = "country_subheading">Venice, Italy</p>
+                        <p class = "country_subheading">Grimentz, Switzerland</p>
                           <span class="heart-icon">&#x2665;</span>
                     </div>
                     <div class="col-lg-4 text-center">
-                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Keukenhof-Holland.jpg')}}" class="d-block w-100" alt="..."/>
-                        <p class = "country_subheading">Amsterdam, The Netherlands</p>
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/seoul.jpg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Seoul, South Korea</p>
                         </div>
                         <div class="col-lg-4 text-center">
                             <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/mountain_cherry.jpg')}}" class="d-block w-100" alt="..."/>
-                            <p class = "country_subheading">Yoshino, Japan</p>
+                            <p class = "country_subheading">Capetown, South Africa</p>
                         </div>
                 </div>
               </div>
@@ -39,7 +41,7 @@
                 <div class="row">
                     <div class="col-lg-4 text-center">
                             <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Turks and Caicos .jpeg')}}" class="d-block w-100" alt="..."/>
-                        <p class = "country_subheading">Turks and Caicos</p>
+                        <p class = "country_subheading">Rio de Janeiro, Brasil</p>
                     </div>
                     <div class="col-lg-4 text-center">
                             <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/denmark.jpg')}}" class="d-block w-100" alt="..."/>
@@ -98,16 +100,16 @@
               <div class="carousel-item active">
                 <div class="row">
                     <div class="col-lg-4 text-center">
-                            <img  style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Fairmont_pacific_vancouver.jpeg')}}" class="d-block w-100" alt="..."/>
+                            <img  style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/vanc_hotel.jpeg')}}" class="d-block w-100" alt="..."/>
                         <p class = "country_subheading">Fairmont Pacific Rim, Vancouver</p>
                           <span class="heart-icon">&#x2665;</span>
                     </div>
                     <div class="col-lg-4 text-center">
-                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Burj_alarab.jpeg')}}" class="d-block w-100" alt="..."/>
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/burj.jpeg')}}" class="d-block w-100" alt="..."/>
                         <p class = "country_subheading">Burj Al Arab, Dubai</p>
                         </div>
                         <div class="col-lg-4 text-center">
-                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/mountain_cherry.jpg')}}" class="d-block w-100" alt="..."/>
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/ritz_paris.jpeg')}}" class="d-block w-100" alt="..."/>
                             <p class = "country_subheading">Ritz Paris, Paris</p>
                         </div>
                 </div>
@@ -115,16 +117,16 @@
               <div class="carousel-item">
                 <div class="row">
                     <div class="col-lg-4 text-center">
-                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Turks and Caicos .jpeg')}}" class="d-block w-100" alt="..."/>
-                        <p class = "country_subheading">Turks and Caicos</p>
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/plaza_nyc.jpeg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">The Plaza Hotel, New Yor</p>
                     </div>
                     <div class="col-lg-4 text-center">
-                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/denmark.jpg')}}" class="d-block w-100" alt="..."/>
-                        <p class = "country_subheading">Copenhagen, Denmark</p>
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/savoy.jpeg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">The Savoy,London</p>
                         </div>
                         <div class="col-lg-4 text-center">
-                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Algarve.jpeg')}}" class="d-block w-100" alt="..."/>
-                            <p class = "country_subheading">Algarve, Portugal</p>
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Aman.jpeg')}}" class="d-block w-100" alt="..."/>
+                            <p class = "country_subheading">Aman Tokyo, Tokyo</p>
 
                         </div>
                     </div>
@@ -133,8 +135,8 @@
                 <div class="carousel-item">
                     <div class="row">
                         <div class="col-lg-4 text-center">
-                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/marrakech.jpg')}}" class="d-block w-100" alt="..."/>
-                            <p class = "country_subheading">Marrakech, Morroco</p>
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/belmond.jpeg')}}" class="d-block w-100" alt="..."/>
+                            <p class = "country_subheading">Hotel Belmond Caruso, Ravello </p>
                         </div>
                     </div>
                     </div>
@@ -166,7 +168,7 @@
 <div class = "paragraph1">
     <p>Make the most of your trip by saving all the activities you want to do! Whether it's hiking, sightseeing, or trying new foods, keep them all in one place.</p>
 </div>
-
+</div>
 <div class="row2">
 <div class="column2">
         <div class="container">
@@ -175,33 +177,33 @@
               <div class="carousel-item active">
                 <div class="row">
                     <div class="col-lg-4 text-center">
-                            <img  style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Venice.webp')}}" class="d-block w-100" alt="..."/>
-                        <p class = "country_subheading">Venice, Italy</p>
+                            <img  style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/canyon.jpg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Grand Canyon, Arizona</p>
                           <span class="heart-icon">&#x2665;</span>
                     </div>
                     <div class="col-lg-4 text-center">
-                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Keukenhof-Holland.jpg')}}" class="d-block w-100" alt="..."/>
-                        <p class = "country_subheading">Amsterdam, The Netherlands</p>
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/barrier.jpg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Great Barrier Reef, Queensland</p>
                         </div>
                         <div class="col-lg-4 text-center">
-                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/mountain_cherry.jpg')}}" class="d-block w-100" alt="..."/>
-                            <p class = "country_subheading">Yoshino, Japan</p>
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/jordan.jpg')}}" class="d-block w-100" alt="..."/>
+                            <p class = "country_subheading">City of Petra,Jordan</p>
                         </div>
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="row">
                     <div class="col-lg-4 text-center">
-                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Turks and Caicos .jpeg')}}" class="d-block w-100" alt="..."/>
-                        <p class = "country_subheading">Turks and Caicos</p>
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/alaska2.jpg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Northern Lights, Alaska</p>
                     </div>
                     <div class="col-lg-4 text-center">
-                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/denmark.jpg')}}" class="d-block w-100" alt="..."/>
-                        <p class = "country_subheading">Copenhagen, Denmark</p>
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/louvre.jpg')}}" class="d-block w-100" alt="..."/>
+                        <p class = "country_subheading">Louvre, France</p>
                         </div>
                         <div class="col-lg-4 text-center">
-                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/Algarve.jpeg')}}" class="d-block w-100" alt="..."/>
-                            <p class = "country_subheading">Algarve, Portugal</p>
+                            <img style="width: auto; height: 300px; border-radius: 20px" src="{{url_for('static', filename='images/neworleans.jpg')}}" class="d-block w-100" alt="..."/>
+                            <p class = "country_subheading">French Quarter, New Orleans</p>
 
                         </div>
                     </div>
