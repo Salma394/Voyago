@@ -122,7 +122,7 @@ h1{
 	width: 480px;
 	height: 100px;
 	color: #7a7a7a;
-	font-family: "Source Sans 3";
+	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
 	font-size: 36px;
 	line-height: 1.28;
@@ -134,7 +134,7 @@ h1{
     width: 480px;
     height: 120px;
     color: #7a7a7a;
-    font-family: "Source Sans 3";
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 1.28;
@@ -209,7 +209,7 @@ font-size: 20px;
 
 
 .body {
-  padding-bottom: 100px; /* adjust as needed */
+  padding-bottom: 100px;
 }
 
 
@@ -306,39 +306,10 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 text-align: center;
     }
 
-.result-box ul {
-    border-top: 1px solid #999;
-    /* padding: 15px 10px; */
+
 }
-/* for suggested countries when user searches on the website*/
-.result-box ul li {
-    list-style-type: none;
-    border-radius: 3px;
-    padding: 15px 10px;
-    cursor: pointer;
-}
-.result-box ul li:hover {
-    /* background: #E9F3FF; */
-    background: rgb(149, 151, 149);
-}
-.result-box * {
-    margin: 0;
-    padding: 0;
-}
-.result-box {
-    min-width: 300px;
-    max-height: 300px;
-    overflow-y: scroll;
-    position: absolute;
-}
-.search-box #search-input,#search-button
-{
-    height: 50px;
-}
-#search-input
-{
-    border-color: #fff;
-}
+
+
 .input-group-rounded .input-group-field {
     border-radius: 5000px 0 0 5000px;
     padding-left: 1rem;
