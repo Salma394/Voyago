@@ -1,16 +1,13 @@
 # Voyago :earth_americas: :airplane:
 
-![Voyago Banner](https://link-to-your-banner-image.com)
 
-Welcome to the official GitHub repository of **Voyago**, your trusted companion for an unforgettable journey. Voyago is a platform designed to make travel planning more accessible and enjoyable, offering an array of features to take you from dreaming to experiencing amazing adventures.
+Welcome to the official GitHub repository of **Voyago**, your trusted companion for an unforgettable journey. Voyago is a platform designed to simplify travel planning, offering a variety of features to take you from dreaming to experiencing remarkable adventures.
 
 ## :sparkles: Features
 
-- **Destination Discovery**: Explore thousands of potential travel destinations worldwide.
-- **Travel Planner**: Plan your trip with ease using our intuitive planner.
-- **Real-time Updates**: Get real-time updates on flight schedules, weather, and more.
-- **Personalized Suggestions**: Get tailored recommendations based on your travel preferences.
-- **Community**: Connect with a global community of fellow travelers.
+- **Destination Search**: Search and discover thousands of travel destinations worldwide.
+- **Travel Reviews**: Access insightful reviews from fellow travelers to make informed travel decisions.
+- **Personalized Recommendations**: Get tailored travel recommendations based on your preferences and travel history.
 
 ## :rocket: Getting Started
 
@@ -18,25 +15,32 @@ Welcome to the official GitHub repository of **Voyago**, your trusted companion 
     ```
     git clone https://github.com/your-github-username/voyago.git
     ```
-2. Install dependencies:
+2. Navigate to the project directory:
     ```
     cd voyago
-    npm install
     ```
-3. Run the application:
+3. Create a virtual environment (optional, but recommended):
     ```
-    npm start
+    python3 -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
     ```
-Visit `http://localhost:3000` in your browser to start planning your next adventure!
+4. Install dependencies:
+    ```
+    pip install -r requirements.txt
+    ```
+5. Run the application:
+    ```
+    python main.py
+    ```
+Visit `http://localhost:5000` in your browser to start planning your next adventure!
+
 
 ## :hammer_and_wrench: Technologies Used
 
-- **Frontend**: ReactJS, Redux, Bootstrap
-- **Backend**: NodeJS, ExpressJS, MongoDB
+- **Frontend**: HTML, CSS, Bootstrap,Javascript
+- **Backend**: Python, MySQL
 
 ## :books: Documentation
-
-For more detailed information on using Voyago, check out our [Wiki](link-to-your-wiki) or browse the [API documentation](link-to-your-api-docs).
 
 ## :handshake: Contributing
 
@@ -44,12 +48,15 @@ We welcome contributions! Please see our [Contributing Guidelines](link-to-your-
 
 ## :busts_in_silhouette: Team
 
-- [John Doe](link-to-profile) - Project Lead
-- [Jane Doe](link-to-profile) - Backend Engineer
-- [Mike Smith](link-to-profile) - Frontend Engineer
-- [Sarah Williams](link-to-profile) - UX/UI Designer
+- [Aaliyah Wais-Pompey](https://github.com/aaliyahwp)
+- [Shade Agoro](https://github.com/ShadeAgoro)
+- [Jessica Wan](https://github.com/j27wan)
 
-## :mailbox: Contact
 
-For any queries, feel free to reach out to us at [support@voyago.com](mailto:support@voyago.com)
+## :balance_scale: License
 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## :star: 
+
+Please contact if you have any questions or feedback ⭐️ !
