@@ -37,10 +37,8 @@ Visit `http://localhost:5000` in your browser to start planning your next advent
 
 ## :hammer_and_wrench: Technologies Used
 
-- **Frontend**: HTML, CSS, Bootstrap,Javascript
-- **Backend**: Python, MySQL
-
-## :books: Documentation
+- **Frontend**: HTML, CSS, Bootstrap,Javascript,Jinja
+- **Backend**: Python, MySQL,Flask
 
 ## :handshake: Contributing
 
